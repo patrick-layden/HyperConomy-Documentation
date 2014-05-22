@@ -1,0 +1,177 @@
+==Parameters==
+|=Appearance|=Type|
+|[something]|Required|
+|(something)|Optional|
+ 
+
+==Player Commands==
+|=Command|=Aliases|=Permission|=Description|
+|/buy [name] (amount/"max")|/by|hyperconomy.buy|Buys the selected objects(s). If no amount parameter is given, 1 of the chosen object is bought. If "max" is given as the amount parameter, it buys as many of an item as your inventory can hold. If an enchantment is specified it will be applied to the currently held item.|
+|/hb (amount/"max")|/heldbuy|hyperconomy.buy|Buys an amount of the item you're holding. If no amount parameter is given, 1 of the chosen item is bought. If "max" is given as the amount parameter, it buys as many of an item as your inventory can hold.|
+|/sell [name] (amount/"max")|/sl|hyperconomy.sell|Sells items. If no amount parameter is specified, it sells one of the specified item. Otherwise, it sells the specified amount. If "max" is given it will sell all of the specified item from your inventory. For instance, "/sell lapisblock max" would sell every lapis block in your inventory.  If an enchantment is specified it will be removed from the currently held item.|
+|/hs (amount/"max")|/heldsell|hyperconomy.sell|Sells the given amount of the item you're holding. This command will prioritize the item/item stack that is in your hand over other items, selling it first. If "max" is given as the parameter it will sell all of the item that you're holding.|
+|/sellall||hyperconomy.sellall|This command will sell every item in your inventory (except enchanted items or items that are not available in the current shop, et cetera.)|
+|/value [name] (amount or enchantment class)|/vl|hyperconomy.value|Gets information about an item's value. If items are in your inventory with damage, /value will take that into account. If no amount parameter is specified it gives the value for one of the chosen item.  For enchantments an enchantment class can be specified to get the value for an enchantment on a specific material.|
+|/hv (amount)|/heldvalue|hyperconomy.value|Gets information about the value of the item you're holding. It displays the cost to sell the specified amount, the cost to buy it, and the amount of the item that the global shop currently has available.  This command will take into account damage to items and reduce the value accordingly.|
+|/iteminfo (name)|/ii|hyperconomy.info|Displays information about the item you're holding if no parameter is given. If a name is provided the command will provide information on the specified object.|
+|/topitems (page)|/ti|hyperconomy.top|Lists the items in your current economy with the most stock. If no page parameter is given it defaults to page 1. "/topitems 2" would go to the second page and so on. If you are in a shop, only items in that shop will be displayed.|
+|/topenchants (page)|/te|hyperconomy.top|The same as the /topitems command except for enchantments.|
+|/browseshop [Search String] (page)|/bs|hyperconomy.top|Displays items in your current economy or items in a shop if you are in one. If you're in a shop it will only display items available in that shop. /browseshop sorts items in alphabetical order and puts them into multiple pages if there are too many to fit on one page. It also displays the stock and purchase price for the object.|
+|/xpinfo|/xpi|hyperconomy.info|Displays information about experience.|
+|/hc||hyperconomy.use|Displays command help for HyperConomy.|
+|/hcbalance (account)|/hcb|hyperconomy.use|Displays the balance of your account or the balance of the specified account.|
+|/hcpay [account] [amount]|/hcp|hyperconomy.pay|Pays the specified account the given amount and removes it from your account.|
+|/hctop (page)|/hct|hyperconomy.topbalance|Displays the top server balances.  Specify a page to view it.|
+|/economyinfo|/ei|hyperconomy.use|Displays your current economy.|
+
+
+**Manageshop Command**
+(Alias /ms) 
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|select [shop name]|sel|"/ms sel shop1" or "/manageshop select shop2"|hyperconomy.use|Selects a shop.  The selected shop is the shop which all other /manageshop options will act upon.  Shops will also be selected  by walking inside of them.  Entering a shop will only select it if you own the shop.  For players with the hyperconomy.admin permission any shop will be selected by walking into it.|
+|create [name] (radius)|c|"/ms c shop1" or "/manageshop create shop1 10"|hyperconomy.use|This option creates a shop with the specified name.  If a radius is specified the shop will extend beyond your character in all directions by the radius amount.  The total volume of the shop cannot exceed the maximum volume defined for player shops in config.yml.|
+|delete ('confirm')|d|"/manageshop delete" or "/ms d confirm"|hyperconomy.use|This option deletes the currently selected shop.  It will give a warning if you still have items in your shop and will require you to type 'confirm' as a parameter.|
+|set1|s1|"/ms set1", "/manageshop s1"|hyperconomy.use|This option specifies the first corner in the selected shop's cuboid region.  The point is set where you are standing.  (At your feet.)|
+|set2|s2|"/ms set2", "/manageshop s2"|hyperconomy.use|This option specifies the second corner in the selected shop's cuboid region.  The point is set where you are standing.  (At your feet.)|
+|price [object] [price]|p|"/manageshop price stone 25.0", "/ms p diamond 800.25"|hyperconomy.use|This option sets the buy and sell price of the specified shop object.  If an object doesn't have a price set its price will be equal to the global market value for that object.  When a price is set, the object will buy and sell for that price at all times.  If a price is set to 0.0 it will return to using the global economy value for that object.|
+|buyprice [object] [price]|p|"/manageshop buyprice stone 25.0"|hyperconomy.use|This option sets the buy price of the specified shop object.  If an object doesn't have a price set its price will be equal to the global market value for that object.  If a price is set to 0.0 it will return to using the global economy value for that object.|
+|sellprice [object] [price]|p|"/manageshop sellprice stone 25.0"|hyperconomy.use|This option sets the sell price of the specified shop object.  If an object doesn't have a price set its price will be equal to the global market value for that object.  If a price is set to 0.0 it will return to using the global economy value for that object.|
+|maxstock [object] [max stock]|p|"/manageshop maxstock obsidian 100"|hyperconomy.use|This option sets the maximum stock level for the specified object.  Once the max stock level is reached no one will be able to sell any more of that object to the shop.  You will still be able to add items beyond the max stock, however.|
+|status [object] [status]|s|"/manageshop status diamondsword sell", "/ms s glass trade"|hyperconomy.use|This option sets the status of the specified shop object.  By default, in a newly created shop, all objects have their status set to NONE, which means that the object cannot be bought or sold from the shop.  There are 4 statuses available: NONE, BUY, SELL, and TRADE.  BUY means the object can only be purchased from the shop.  SELL means the object can only be sold to the shop.  TRADE means both buying and selling are permitted.|
+|/add (object) (amount)|a|"/ms add diamond 5", "/manageshop a smite3"|hyperconomy.use|This option adds an item/object to a player shop and removes it from your inventory.  This will also work for experience and enchantments.  If no name is specified it will add the item or enchantment you're holding.  If no amount is specified it defaults to 1.|
+|remove [object] (amount)|r|"/manageshop remove diamondore 25", "/ms r bluewool"|hyperconomy.use|This option removes an item/object from a player shop and adds it to your inventory.  This will also work of experience and enchantments.  If no amount is specified it defaults to 1.|
+|allow [player]||"/ms allow RegalOwl"|hyperconomy.use|This command allows another player to manage your shop.  They will be able to perform any /ms command on your shop, including allow.  They can add/remove items, changes prices, set statuses, etc.|
+|message [message]||"/ms message &aLine_1%n&9Line_2.%n"|hyperconomy.use|Sets the selected shop's message.  _ will be replaced by spaces, standard color codes will be applied, and %n represents a new line.|
+|owner [owner]||"/ms owner RegalOwl"|hyperconomy.admin|This option sets the owner of the selected shop.  This option is only available to admins.|
+|goto||"/ms goto"|hyperconomy.admin|Teleports you to the currently selected playershop.  This option is only available to admins.|
+|setstock [object] [stock]||"/ms setstock ice 25"|hyperconomy.admin|Sets the stock level for the specified object.|
+|list||"/ms list"|hyperconomy.admin|Lists all player shops.|
+
+
+**Hcbank Command**
+(alias /bank)
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|deposit [bank] [amount]|d|"/hcbank deposit bank1 1000"|hyperconomy.bank|Deposits the specified amount into the bank.  You must be at least a bank member to do this.|
+|withdraw [bank] [amount]|w|"/hcbank withdraw bank1 50.5"|hyperconomy.bank|Withdraws the specified amount from the bank.  You must be at least a bank member to do this.|
+|info (bank)|i|"/hcbank i bank1"|hyperconomy.bank or hyperconomy.viewbanks|If a bank is specified the command displays the bank members, owners, and balance.  For this command to work you either need to be the bank's owner or have the hyperconomy.viewbanks permission.  If no bank is specified the command displays which banks you're a member of and which banks you're and owner of.|
+|top||"/hcbank top"|hyperconomy.viewbanks|Displays the top bank balances on the server.
+|create [name]|c|"/hcbank create bank1"|hyperconomy.bank|Creates a new bank with the specified name.|
+|delete [name]||"/hcbank delete bank1"|hyperconomy.bank|Deletes the bank with the specified name.  If a shop or economy depends on the bank, the ownership of the shop/economy must first be changed.  If the bank has funds in it when it is deleted they will be distributed evenly between the bank's owners.|
+|rename [name] [new name]||"/hcbank rename bank1 bank2"|hyperconomy.bank|Renames the specified bank to the new name.|
+|addmember [bank] [member]|am|"/hcbank addmember bank1 member1"|hyperconomy.bank|Adds the specified player to the bank as a member.  You must be a bank owner to do this.|
+|removemember [bank] [member]|rm|"/hcbank removemember bank1 member1"|hyperconomy.bank|Revokes bank membership for the specified player.  You must be a bank owner to do this.|
+|addowner [bank] [owner]|ao|"/hcbank addowner bank1 RegalOwl"|hyperconomy.bank|Makes the specified player an owner of the bank.  You must be a bank owner to do this.|
+|removeowner [bank] [owner]|ro|"/hcbank removeowner bank1 RegalOwl"|hyperconomy.bank|Revokes bank ownership for the specified player.  You must be a bank owner to do this.|
+
+
+==Administrator Commands==
+|=Command|=Aliases|=Permission|=Description|
+|/objectsettings (name)|/os|hyperconomy.settings|Displays the current economy settings for the item you're holding, or the selected object if a name is given. Settings include item stock, value, median, et cetera.|
+|/scalebypercent [Setting] [Percent]||hyperconomy.scalebypercent|Scales the selected setting by the given percentage for all items and enchantments in the current economy. Setting choices are: value, median, stock, startprice, or staticprice. For examble: "/scalebypercent median 50" will set all medians to 50 percent of their original value. (Sets the median to half of its current value. If the percent was 200, all medians for all items and enchantments would be doubled.)|
+|/audit [account]||hyperconomy.admin|Checks to see what an account's balance should be based on all logged transactions, and all logged account balance changes.|
+|/frameshop [object]|fs|hyperconomy.frameshop|Creates a frame shop in the item frame that you're looking at.  If the frame is in a player shop and the creator has permission, the frameshop will be linked to the player shop.|
+|/importbalance [world or 'player'] (account 1)...(account n)||hyperconomy.admin|This command can only be run when using an external economy plugin via Vault.  You can switch economy plugins with the /toggleeconomy command and a restart of HyperConomy.  The first argument must be either the main world of your server, or the word 'player'.  If a world is specified HyperConomy will search for accounts for every player that has logged into your world.  If 'player' is specified each player specified after 'player' will be imported.  An unlimited number of player arguments can be specified.  If the specified account exists in the external economy, it will be created in HyperConomy and imported.|
+|/toggleeconomy||hyperconomy.admin|Toggles between an external Vault-based economy and the internal HyperConomy economy.  A HyperConomy restart will be required after switching economy plugins.  HyperConomy will display which economy plugin is being used on startup.|
+|/makeaccount [name]||hyperconomy.admin|Makes a new economy account with the specified name.|
+|/taxsettings|/tsettings, /ts|hyperconomy.settings|Displays the current tax setting values.|
+|/settax ['purchase', 'sales', 'static', 'initial', or 'enchant'][percent]|/stax|hyperconomy.admin|Sets the tax for the specified tax type.|
+|/hcset [option] (parameter 1) (parameter 2)|/hcs|hyperconomy.admin|Manages HyperConomy settings. This command has many sub-commands which are listed below.|
+|/makedisplay [item name] ('u')|/mkd|hyperconomy.admin|Makes an item display on the block you're looking at.  If you add the 'u' parameter it will make the display on the block you're standing on.  (Good for tight spaces with lots of signs.)|
+|/removedisplay ('u')|/rdis|hyperconomy.admin|Removes the display on the block you're looking at.  If you add the 'u' parameter it will remove the display on the block you're standing on.  (Good for tight spaces with lots of signs.)|
+|/seteconomy [economy]|/se|hyperconomy.admin|Sets your economy to the specified one.|
+|/listcategories|/lcat|hyperconomy.admin|Lists all categories.|
+|/intervals|/ints|hyperconomy.admin|Displays secondary thread repeat intervals and information about the SQL buffer.|
+|/lockshop|/ls|hyperconomy.admin|Locks down the shop for everyone except for players with the hyperconomy.admin permission.  This allows admins to configure the shop without interference.|
+|/hc disable||hyperconomy.admin|Disables almost all of HyperConomy.  All events are unregistered.  Chest shops, info signs, and other HyperConomy features will remain protected.|
+|/hc enable||hyperconomy.admin|Enables HyperConomy.  Using /hc disable followed by /hc enable is the equivalent of a server reload for HyperConomy.  This will cause any changes made to your YML files or database to become active.|
+|/notify [item/enchantment name or 'all']|/not|hyperconomy.admin|This command is a toggle.  Use the command to turn off notifications for a specific item or enchantment or all items and enchantments.|
+|/additem [name or 'all'] (value)|/ai|hyperconomy.admin|Adds the item you're holding to the database.  This should be an easy way to add custom items such as those with lore, custom names, fireworks, or written books.  If all is specified, all items in your inventory will be added with generic names.  If a value is specified it will be used as the object's value instead of the default value.|
+|/repairsigns [x radius or radius] (y radius) (z radius)||hyperconomy.admin|Scans the specified area for HyperConomy InfoSigns and adds them to your signs.yml file.  (Useful if you somehow deleted or lost your signs.yml file.)|
+|/setchestowner [new owner]||hyperconomy.admin|In order to use this command, you must be looking at the chest you'd like to modify.  When run, the command will alter the chestshop's owner to the owner you specify.  If you specify the global economy account (default is 'hyperconomy') the chest shop will function as an admin chest or server chest shop.|
+|/hyperlog [parameters type] [search string] [parameter type 2] [search string 2] etc...|/hl|hyperconomy.admin|This command allows you to search through your server's sales history using a wide variety of search parameters.  You must type the type of parameter and then type your search string afterward.  The available parameters are listed below.|
+
+
+**Hyperlog Command Parameters**
+|//Sub-Command//|//Aliases//|//Examples//|//Description//|
+|player|p|"player regalowl", "p regal"|This parameter refers to the player that initiated the transaction.|
+|since|s|"s 3d", "since 24h", "s 35M"|This parameter specifies transactions which occurred after the specified time.  Time is measured in either minutes, hours, or days. (M, H, and D respectively)|
+|before|b|"before 7d", "b 6H", "before 20m"|This parameter specifies transactions which occurred before the specified time.  Time is measured in either minutes, hours, or days. (M, H, and D respectively)|
+|action|a|"action sale", "a pur", "a s"|This parameter specifies the type of transaction.  Currently either "sale" or "purchase".|
+|object|o|"object diamond", "o stone", "o emer", "object glass"|This parameter specifies the item or enchantment traded in the transaction.|
+|>amount|>a|">amount 100", ">a 1000"|This parameter requires the amount of an object traded to be greater than the amount specified.|
+|<amount|<a|"<amount 100", "<a 1000"|This parameter requires the amount of an object traded to be less than the amount specified.|
+|>money|>m|">money 1000", ">m 10000"|This parameter requires the cost of a transaction to be greater than the amount specified.|
+|<money|<m|"<money 1000", "<m 10000"|This parameter requires the cost of a transaction to be less than the amount specified.|
+|>tax|>t|">tax 1000", ">t 50"|This parameter requires the tax of a transaction to be greater than the amount specified.|
+|<tax|<t|"<tax 1000", "<t 50"|This parameter requires the tax of a transaction to be less than the amount specified.|
+|store|st|"store default", "store regalowl", "st economy_x"|This parameter specifies the store/economy/player that was involved in the transaction.|
+|type|ty|"type initial", "type static", "ty chest"|This parameter specifies the type of pricing that the traded object is a part of.|
+|>id||">id 1000", ">id 50"|This parameter requires the transaction id (unique transaction identifier) to be greater than the amount specified.|
+|<id||"<id 1000", "<id 50"|This parameter requires the transaction id (unique transaction identifier) to be less than the amount specified.|
+
+**Hyperlog Command Examples**
+|//Command//|//Result//|
+|/hyperlog object diamond since 4d before 3d|This will select all transactions involving diamond objects between 3 and 4 days old.|
+|/hl p regalowl a purch ty che|This will select all purchases from player RegalOwl that came from chest shops.|
+|/hl >m 10000 <t 1 a sal|This will select all sales that were of greater value than $10000 that were not taxed.|
+|/hyperlog object stone >amount 1000 before 10d store main type initial action purchase|This will select all purchases of stone that were greater than 1000 before 10 days ago from the main economy where the price was set to initial|
+
+**Hcset Command**
+(alias /hcs)
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|name [object] [new name]||"/hcs name diamond Diamond"|hyperconomy.admin|Renames the specified object to the given new name.  This is the internal name, not the name that displays for players and admins.  To set the display name use the displayname sub-command.|
+|displayname [object] [new name]|dn|"/hcs displayname ice Ice"|hyperconomy.admin|Renames the specified object to the given new name.  This is the display name which will be used in most HyperConomy response messages.|
+|ceiling [name] [ceiling]|c|"/hcs ceiling dirt 20"|hyperconomy.admin|This option sets the price ceiling for the given object.|
+|static [name or ("all:copy", "all:true", or "all:false")]|stat|"/hcs static dirt", "/hcs static all:copy", "/hcs static all:false"|hyperconomy.admin|This option toggles the given objects static pricing status.  If one of the 3 special arguments is given ("all:copy", "all:true", or "all:false") all objects in the given economy are set to the same static status.  If the copy option is used all objects are set to static pricing and their static prices are set to be the same as their initial prices.|
+|stock [name or ("all", or "all:median")]|s|"/hcs stock dirt 26", "/hcs stock all 100", "/hcs stock all:median"|hyperconomy.admin|This option sets the stock for the given object.  If "all" is given it sets all objects in the current economy to the given stock.  If "all:median" is given it sets all stocks in the current economy to their median values and disables initial pricing.|
+|startprice [name] [price]|starp|"/hcs startprice dirt 25.5"|hyperconomy.admin|This option sets the initial price for the given object.|
+|staticprice [name] [price]|statp|"/hcs staticprice emerald 200.0"|hyperconomy.admin|This option sets the static price for the given object.|
+|value [name] [value]|v|"/hcs value stone 10.0"|hyperconomy.admin|This option sets the value for the given object.|
+|median [name] [median]|m|"/hcs median brick 1000"|hyperconomy.admin|This option sets the median for the given object.|
+|floor [name] [floor]|f|"/hcs floor dirt 1"|hyperconomy.admin|This option sets the price floor for the given object.|
+|initiation [name or ("all:true" or "all:false")]|init|"/hcs initiation dirt", "/hcs initiation all:true"|hyperconomy.admin|This option toggles the initial pricing status for the given object.  If one of the special options is given it will set all objects in the given economy to use the given initiation status.  "all:true" would set all items in the current economy to use initial pricing, for example.|
+|balance [account] [balance]|b|"/hcs balance RegalOwl 1000"|hyperconomy.admin|This option sets the account balance to the given monetary amount.|
+
+**Servershop Command**
+(alias /ss)
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|select [shop name]|s|"/ss s shop1" or "/servershop select shop2"|hyperconomy.admin|Selects a shop.  The selected shop is the shop which all other /servershop options will act upon.  Shops will also be selected  by walking inside of them.  Entering a shop will only select it if you have the hyperconomy.admin permission.|
+|info|i|"/ss i" or "/servershop info"|hyperconomy.admin|Displays information about the currently selected shop.|
+|p1 [name of shop]||"/ss p1 newshop"|hyperconomy.admin|Sets the first point in the shop cuboid and creates a new shop if it doesn't already exist.|
+|p2 [name of shop]||"/ss p2 newshop"|hyperconomy.admin|Sets the second point in the shop cuboid and creates a new shop if it doesn't already exist.|
+|list||"/ss list"|hyperconomy.admin|Lists all shops.|
+|owner [owner]|o|"/ss owner RegalOwl"|hyperconomy.admin|Sets the owner of the currently selected server shop.|
+|remove||"/ss remove"|hyperconomy.admin|Removes the currently selected shop.|
+|rename [new name]||"/ss rename newName"|hyperconomy.admin|Renames the currently selected shop.|
+|message [message]|m|"/ss message A_new_message"|hyperconomy.admin|Sets the selected shop's message.  _ will be replaced by spaces, standard color codes will be applied, and %n represents a new line.|
+|allow [object]|a|"/ss allow stone"|hyperconomy.admin|Allows the specified object to be traded at the currently selected shop.|
+|ban [object]|b|"/ss ban fire"|hyperconomy.admin|Disallows the specified object from being traded at the currently selected shop.|
+|addcategory [category]|acat|"/ss acat blocks"|hyperconomy.admin|Adds the specified category to the currently selected shop.|
+|removecategory [category]|rcat|"/ss rcat blocks"|hyperconomy.admin|Removes the specified category from the currently selected shop.|
+|economy [new economy]|e|"/ss e economy2"|hyperconomy.admin|Sets the economy for the currently selected shop.|
+|goto||"/ss goto"|hyperconomy.admin|Teleports you to the currently selected shop.|
+
+**Hcdata Command**
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|exportcsv [name of table or 'all']||"/hcdata exportcsv objects" or "/hcd exportcsv all"|hyperconomy.admin|Converts the specified SQL table into a CSV file which can be edited by Excel or Calc.  The file will be placed in the import_export folder in the HyperConomy data folder.  Any existing CSV with the same name will be replaced.  If 'all' is specified all SQL tables will be dumped to the folder.|
+|importcsv [name of table or 'all']||"/hcdata importcsv objects" or "/hcd importcsv all"|hyperconomy.admin|Converts the specified CSV file in the import_export folder into the active HyperConomy database table. All data in the SQL table will be replaced by the CSV data.  This is a good way manipulate HyperConomy data easily. If 'all' is specified all possible SQL tables will be imported and replaced.|
+|importmissing (economy)||"/hcdata importmissing econ1"|hyperconomy.admin|Imports new or missing objects to the specified economy.  If no economy is specified they will be imported into the default economy.  This command can be run after a Minecraft update to import new items. (Assuming they've already been added to HyperConomy.)|
+|setdefaultprices [name of economy]||"/hcdata setdefaultprices default"|hyperconomy.admin|Replaces the existing prices in the specified economy with the default ones.|
+|clearhistory||"/hcdata clearhistory"|hyperconomy.admin|Wipes the hyperconomy_history table.  This will free up space in the database.|
+|clearlogs||"/hcdata clearlogs"|hyperconomy.admin|Wipes the hyperconomy_audit_log and hyperconomy_log tables.  This will free up space in the database.|
+|repairnames||"/hcdata repairnames"|hyperconomy.admin|This command will attempt to update and reset item names, display names, and aliases to their default values.|
+|updateitemstack [object]||"/hcdata updateitemstack stone"|hyperconomy.admin|This command will update the Minecraft/CraftBukkit/etc ItemStack attached to the HyperConomy object.|
+
+**Hcdelete Command**
+(alias /hcd)
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|object [name]||"/hcdelete object sponge"|hyperconomy.admin|Deletes the specified item/object from your current economy.|
+|account [name]||"/hcdelete account RegalOwl"|hyperconomy.admin|Deletes the specified economy account from HyperConomy.|
+
+**Hceconomy Command**
+(alias /he)
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|create [name]||"/hceconomy create econ2"|hyperconomy.admin|Creates a new economy with the specified name.|
+|delete [name]||"/hceconomy delete econ2"|hyperconomy.admin|Deletes the specified economy.|
+|account [name]||"/hceconomy account RegalOwl"|hyperconomy.admin|Sets the default account for the economy.  This account will be used when creating new server shops.|
+|list||"/he list"|hyperconomy.admin|Lists all of the server economies.|

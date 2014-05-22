@@ -1,0 +1,28 @@
+|=Permission|=Default|=Description|
+|hyperconomy.*|op|Gives access to all HyperConomy commands and adds all the following permissions.|
+|hyperconomy.use|true|Allows general use of HyperConomy.  Enabled by default for everyone. When this permission is given the following nodes are also given: hyperconomy.buy, hyperconomy.sell, hyperconomy.value, hyperconomy.sellall, hyperconomy.info, hyperconomy.top, hyperconomy.xp, hyperconomy.chestshop, hyperconomy.playershop, hyperconomy.buysign, hyperconomy.sellsign, hyperconomy.pay|
+|hyperconomy.econ|op|Allows use of all basic economy commands.  When this permission is given the following nodes are also given: hyperconomy.balanceall, hyperconomy.pay, hyperconomy.topbalance|
+|hyperconomy.admin|false|Give access to HyperConomy administrative commands.|
+|hyperconomy.buy|false|Allows use of buy commands.|
+|hyperconomy.sell|false|Allows use of sell commands.|
+|hyperconomy.value|false|Allows use of value commands.|
+|hyperconomy.sellall|false|Allows use of the sellall command.|
+|hyperconomy.info|false|Allows use of information commands.|
+|hyperconomy.top|false|Allows use of the topitems and topenchants commands.|
+|hyperconomy.settings|false|Allows checking the settings.|
+|hyperconomy.error|false|Displays error messages if plugin errors occur.|
+|hyperconomy.scalebypercent|false|Allows the use of /scalebypercent.|
+|hyperconomy.createsign|false|Allows the creation of information signs and transaction signs.|
+|hyperconomy.notify|false|Allows players to receive price update notifications.|
+|hyperconomy.xp|false|Allows experience trading.|
+|hyperconomy.chestshop|false|Allows the creation of chest shops.|
+|hyperconomy.shop|false|Allows access to all functions at all shops.|
+|hyperconomy.buysign|false|Allows purchasing from transaction signs.|
+|hyperconomy.sellsign|false|Allows selling to transaction signs.|
+|hyperconomy.balanceall|false|Allows other players' balances to be displayed.|
+|hyperconomy.topbalance|false|Allows display of top server balances.|
+|hyperconomy.pay|false|Allows sending payment to other players.|
+|hyperconomy.playershop|false|Allows the use of the /manageshop command.|
+|hyperconomy.frameshop|false|Allows the use of the /frameshop command.|
+|hyperconomy.bank|false|Allows the use of the /hcbank command.|
+|hyperconomy.viewbanks|false|Allows players to view all information about all banks.|
