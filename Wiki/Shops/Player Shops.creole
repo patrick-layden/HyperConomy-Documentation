@@ -1,0 +1,9 @@
+* Player shops are shops that can be created by any player and are managed almost exclusively by the /manageshop or /ms command.
+* Player shops are like server shops in that they are also defined by a cuboid region. The region is set by using the /ms s1 and /ms s2 commands for each cuboid point.
+* Access to the /manageshop command can be limited with the hyperconomy.playershop permission. By default all players have this permission.
+* Player shops are part of an economy like server shops, but custom prices and trade statuses can be set for all items. The /ms price command will override the global market price for the specified item.
+* Items in the shop can be hidden, set to buy only, set to sell only, or set to allow all trade. The statuses that can be set with /ms status are "none", "buy" for buy only, "sell" for sell only, and "trade" for any trade.
+* When items/objects are added or sold to a player shop, this stock will change the price of all dynamically priced items throughout the economy. Despite increasing the economy's stock for that object/item, the item will not be available in server shops or in other player shops. The item will be unique to only the player shop into which it was sold or placed.
+* Player shop sizes (maximum volume) can be set in the config.yml. The maximum number of shops per player can also be set there.
+* Players can allow other players to manage their shop with the /ms allow command.
+* Check the commands page for more information about the the /manageshop command.

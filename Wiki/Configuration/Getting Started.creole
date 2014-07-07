@@ -1,0 +1,30 @@
+==Getting Started==
+* After placing HyperConomy.jar into your plugins folder HyperConomy will generate the default database HyperConomy.db and the default configuration file config.yml.
+* HyperConomy can either run as an economy plugin itself, or use an external economy plugin through Vault (iConomy, BOSEconomy, etc).  
+* By default HyperConomy will try to use an external economy plugin.  If Vault or an external economy plugin isn't found, HyperConomy's internal economy plugin will be enabled.
+* HyperConomy's internal economy has all of the basic features that you'd expect from an economy plugin: pay commands, top balance commands, banks, and more.  
+* The internal economy can also be reached through Vault by other plugins.  Basically, you can think of HyperConomy as an economy plugin with a lot of extra features when the internal economy is enabled.
+* To change how the internal economy functions, edit the economy-plugin section of config.yml.  "use-external", if set to true, will try to use an external economy plugin via Vault.  
+* If you would like to use MySQL, you will will need to fill in the sql section in config.yml and set use-mysql to true.
+* If you would like to change to a language other than English, you can use the in game command /setlanguage [language]  If the desired language is not supported, any translation help would be appreciated.
+
+===Choose Features===
+* By default, most of HyperConomy's features are enabled.  If you'd like to disable some, or see what can be disabled, take a look at the enable-feature section of config.yml.
+* One notable feature that comes disabled is composite items.  Composite items make the price of crafted items equal the sum of their components.  For example, a diamond block will always be worth 9 diamonds.  To enable composite pricing set composite-items to true in config.yml
+* If you're using an older build of craftbukkit or another server software you will need to set the uuid-support to false in config.yml.  This will make HyperConomy compatible with versions prior to 1.7.9.
+* If you would like a global shop to be accessible anywhere on your server, you can set use-shops to false in config.yml.  This will enable the global shop and disable player and server shops.
+
+===Create A New Economy===
+* To create an economy type /he create [name of economy]
+* To use or modify your new economy set your economy to the new economy with /se [name]
+* If you choose not to create a new economy, the 'default' economy will be used automatically. 
+* If you are planning to heavily modify your economy
+
+===Setup a Shop===
+* There are many possible configurations of shops on your server
+
+===Configure Prices===
+
+===Learn About Player Commands===
+
+===Learn About Other Features===

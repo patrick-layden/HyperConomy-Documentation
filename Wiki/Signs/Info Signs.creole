@@ -1,0 +1,49 @@
+
+
+To use an information sign, follow the format below:
+
+Line 1=[Item or Enchantment Name]
+Line 2=[Continuation of Item or Enchantment Name]
+Line 3=[Type of sign.]
+Line 4=[Additional Data if Required]
+
+Example Sign: (Remove all quotes)
+
+Line 1 = "Stone"
+Line 2 = ""
+Line 3 = "stock"
+Line 4 = ""
+
+Example Sign #2:
+
+Line 1 = "Gold"
+Line 2 = "Block"
+Line 3 = "History"
+Line 4 = "5h"
+
+[Item or Enchantment Name]
+The name of the item or enchantment you want information about. Format the name as you would like it to appear on the sign. If your item is named "stone" and you put "Stone", or "sToNe" it will still work properly.
+
+[Continuation of Item or Enchantment Name]
+In most cases, this will remain blank. This line is only to be used if you cannot fit the entire item name on the first line, or if you'd like to format it a specific way. For example, if you have an item called "goldblock", you could put Gold on line 1 and then Block on line 2. Line 2 is designed to give you flexibility and space to format your item names. The [Type of sign.] must be placed on line 3 and cannot be on this line. Anything in this line will be part of the item/enchantment name.
+
+[Type of sign.]
+Sell, Buy, SB, Stock, Totalstock, Status, Value, Staticprice, Startprice, Median, History, or Tax. This section will format itself, so to save yourself time there is no need to capitalize anything. Just write "stock", for example, and it will change to "Stock" automatically.
+
+Sell: Displays the sell value for the item or enchantment.
+Buy: Displays the purchase cost for the item or enchantment.
+SB: Combination sell and buy sign. Information is compacted to save space.
+Stock: Displays the stock for the item or enchantment.
+Total Stock: Displays the total stock for the item or enchantment, including the stock in all PlayerShops.
+Status: Informs you of what type of pricing the item or enchantment is using. It will either be, Static, Dynamic, or Initial.
+Value: Displays the item or enchantment's value setting.
+Static Price: Displays the item or enchantment's static price setting.
+Start Price: Displays the item or enchantment's start price setting.
+Median: Displays the item or enchantment's median setting.
+Tax: Displays how much tax will be spent when purchasing this item or enchantment.
+History: Displays how the current price compares with a historical price. This is similar to a stock exchange. It will be green if the price increased, and red if it decreased. The price increase and decrease is shown in percentage points.
+
+[Additional Data if Required]
+If the type of sign is History, you must add [Additional Data if Required]. The format is [Quantity][Unit]. The units available are h for hour, d for day, w for week, and m for month. So, for instance, if you put 3h it will be 3 hours, 5d will be 5 days, etc. The logs are set to record up to 1 month. This can be modified in the config.yml file. If you'd prefer the log to take up less space, simply lower the number of days to log data. If you'd prefer your history log to last forever, increase the number of days. In theory, it should work for over a year. It might start to lag though, I'm not sure. The file would be a huge number of megabytes for a year. At 1 month the file will already be quite large, at several megabytes.
+
+If the type of sign is Sell, Buy, or Tax and the sign is for an enchantment you have to add the enchantment class (diamond, bow, stone, etc.) to [Additional Data if Required]

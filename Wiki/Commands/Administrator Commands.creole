@@ -1,0 +1,30 @@
+==Administrator Commands==
+|=Command|=Aliases|=Permission|=Description|
+|/objectsettings (name)|/os|hyperconomy.settings|Displays the current economy settings for the item you're holding, or the selected object if a name is given. Settings include item stock, value, median, et cetera.|
+|/scalebypercent [Setting] [Percent]||hyperconomy.scalebypercent|Scales the selected setting by the given percentage for all items and enchantments in the current economy. Setting choices are: value, median, stock, startprice, or staticprice. For examble: "/scalebypercent median 50" will set all medians to 50 percent of their original value. (Sets the median to half of its current value. If the percent was 200, all medians for all items and enchantments would be doubled.)|
+|/audit [account]||hyperconomy.admin|Checks to see what an account's balance should be based on all logged transactions, and all logged account balance changes.|
+|/frameshop [object]|fs|hyperconomy.frameshop|Creates a frame shop in the item frame that you're looking at.  If the frame is in a player shop and the creator has permission, the frameshop will be linked to the player shop.|
+|/importbalance [world or 'player'] (account 1)...(account n)||hyperconomy.admin|This command can only be run when using an external economy plugin via Vault.  You can switch economy plugins with the /toggleeconomy command and a restart of HyperConomy.  The first argument must be either the main world of your server, or the word 'player'.  If a world is specified HyperConomy will search for accounts for every player that has logged into your world.  If 'player' is specified each player specified after 'player' will be imported.  An unlimited number of player arguments can be specified.  If the specified account exists in the external economy, it will be created in HyperConomy and imported.|
+|/toggleeconomy||hyperconomy.admin|Toggles between an external Vault-based economy and the internal HyperConomy economy.  A HyperConomy restart will be required after switching economy plugins.  HyperConomy will display which economy plugin is being used on startup.|
+|/makeaccount [name]||hyperconomy.admin|Makes a new economy account with the specified name.|
+|/taxsettings|/tsettings, /ts|hyperconomy.settings|Displays the current tax setting values.|
+|/settax ['purchase', 'sales', 'static', 'initial', or 'enchant'][percent]|/stax|hyperconomy.admin|Sets the tax for the specified tax type.|
+|/hcset [option] (parameter 1) (parameter 2)|/hcs|hyperconomy.admin|Manages HyperConomy settings. This command has many sub-commands which are listed below.|
+|/makedisplay [item name] ('u')|/mkd|hyperconomy.admin|Makes an item display on the block you're looking at.  If you add the 'u' parameter it will make the display on the block you're standing on.  (Good for tight spaces with lots of signs.)|
+|/removedisplay ('u')|/rdis|hyperconomy.admin|Removes the display on the block you're looking at.  If you add the 'u' parameter it will remove the display on the block you're standing on.  (Good for tight spaces with lots of signs.)|
+|/seteconomy [economy]|/se|hyperconomy.admin|Sets your economy to the specified one.|
+|/listcategories|/lcat|hyperconomy.admin|Lists all categories.|
+|/intervals|/ints|hyperconomy.admin|Displays secondary thread repeat intervals and information about the SQL buffer.|
+|/lockshop|/ls|hyperconomy.admin|Locks down the shop for everyone except for players with the hyperconomy.admin permission.  This allows admins to configure the shop without interference.|
+|/hc disable||hyperconomy.admin|Disables almost all of HyperConomy.  All events are unregistered.  Chest shops, info signs, and other HyperConomy features will remain protected.|
+|/hc enable||hyperconomy.admin|Enables HyperConomy.  Using /hc disable followed by /hc enable is the equivalent of a server reload for HyperConomy.  This will cause any changes made to your YML files or database to become active.|
+|/notify [item/enchantment name or 'all']|/not|hyperconomy.admin|This command is a toggle.  Use the command to turn off notifications for a specific item or enchantment or all items and enchantments.|
+|/additem [name or 'all'] (value)|/ai|hyperconomy.admin|Adds the item you're holding to the database.  This should be an easy way to add custom items such as those with lore, custom names, fireworks, or written books.  If all is specified, all items in your inventory will be added with generic names.  If a value is specified it will be used as the object's value instead of the default value.|
+|/repairsigns [x radius or radius] (y radius) (z radius)||hyperconomy.admin|Scans the specified area for HyperConomy InfoSigns and adds them to your signs.yml file.  (Useful if you somehow deleted or lost your signs.yml file.)|
+|/setchestowner [new owner]||hyperconomy.admin|In order to use this command, you must be looking at the chest you'd like to modify.  When run, the command will alter the chestshop's owner to the owner you specify.  If you specify the global economy account (default is 'hyperconomy') the chest shop will function as an admin chest or server chest shop.|
+
+**Hcdelete Command**
+(alias /hcd)
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|object [name]||"/hcdelete object sponge"|hyperconomy.admin|Deletes the specified item/object from your current economy.|
+|account [name]||"/hcdelete account RegalOwl"|hyperconomy.admin|Deletes the specified economy account from HyperConomy.|

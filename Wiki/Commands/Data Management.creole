@@ -1,0 +1,14 @@
+===Hcdata Command===
+|//Command//|//Aliases//|//Examples//|//Description//|
+|/hcdata [parameter]||hyperconomy.admin|This command manages the database. Data can be imported/exported etc.|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|exportcsv [name of table or 'all']||"/hcdata exportcsv objects" or "/hcd exportcsv all"|hyperconomy.admin|Converts the specified SQL table into a CSV file which can be edited by Excel or Calc.  The file will be placed in the import_export folder in the HyperConomy data folder.  Any existing CSV with the same name will be replaced.  If 'all' is specified all SQL tables will be dumped to the folder.|
+|importcsv [name of table or 'all']||"/hcdata importcsv objects" or "/hcd importcsv all"|hyperconomy.admin|Converts the specified CSV file in the import_export folder into the active HyperConomy database table. All data in the SQL table will be replaced by the CSV data.  This is a good way manipulate HyperConomy data easily. If 'all' is specified all possible SQL tables will be imported and replaced.|
+|importmissing (economy)||"/hcdata importmissing econ1"|hyperconomy.admin|Imports new or missing objects to the specified economy.  If no economy is specified they will be imported into the default economy.  This command can be run after a Minecraft update to import new items. (Assuming they've already been added to HyperConomy.)|
+|setdefaultprices [name of economy]||"/hcdata setdefaultprices default"|hyperconomy.admin|Replaces the existing prices in the specified economy with the default ones.|
+|clearhistory||"/hcdata clearhistory"|hyperconomy.admin|Wipes the hyperconomy_history table.  This will free up space in the database.|
+|clearlogs||"/hcdata clearlogs"|hyperconomy.admin|Wipes the hyperconomy_audit_log and hyperconomy_log tables.  This will free up space in the database.|
+|repairnames||"/hcdata repairnames"|hyperconomy.admin|This command will attempt to update and reset item names, display names, and aliases to their default values.|
+|updateitemstack [object]||"/hcdata updateitemstack stone"|hyperconomy.admin|This command will update the Minecraft/CraftBukkit/etc ItemStack attached to the HyperConomy object.|

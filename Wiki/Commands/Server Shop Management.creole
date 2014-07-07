@@ -1,0 +1,21 @@
+===Servershop Command===
+|//Command//|//Aliases//|//Examples//|//Description//|
+|/servershop [parameter]|/ss|hyperconomy.admin|This command manages HyperConomy server shops.|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|select [shop name]|s|"/ss s shop1" or "/servershop select shop2"|hyperconomy.admin|Selects a shop.  The selected shop is the shop which all other /servershop options will act upon.  Shops will also be selected  by walking inside of them.  Entering a shop will only select it if you have the hyperconomy.admin permission.|
+|info|i|"/ss i" or "/servershop info"|hyperconomy.admin|Displays information about the currently selected shop.|
+|p1 [name of shop]||"/ss p1 newshop"|hyperconomy.admin|Sets the first point in the shop cuboid and creates a new shop if it doesn't already exist.|
+|p2 [name of shop]||"/ss p2 newshop"|hyperconomy.admin|Sets the second point in the shop cuboid and creates a new shop if it doesn't already exist.|
+|list||"/ss list"|hyperconomy.admin|Lists all shops.|
+|owner [owner]|o|"/ss owner RegalOwl"|hyperconomy.admin|Sets the owner of the currently selected server shop.|
+|remove||"/ss remove"|hyperconomy.admin|Removes the currently selected shop.|
+|rename [new name]||"/ss rename newName"|hyperconomy.admin|Renames the currently selected shop.|
+|message [message]|m|"/ss message A_new_message"|hyperconomy.admin|Sets the selected shop's message.  _ will be replaced by spaces, standard color codes will be applied, and %n represents a new line.|
+|allow [object]|a|"/ss allow stone"|hyperconomy.admin|Allows the specified object to be traded at the currently selected shop.|
+|ban [object]|b|"/ss ban fire"|hyperconomy.admin|Disallows the specified object from being traded at the currently selected shop.|
+|addcategory [category]|acat|"/ss acat blocks"|hyperconomy.admin|Adds the specified category to the currently selected shop.|
+|removecategory [category]|rcat|"/ss rcat blocks"|hyperconomy.admin|Removes the specified category from the currently selected shop.|
+|economy [new economy]|e|"/ss e economy2"|hyperconomy.admin|Sets the economy for the currently selected shop.|
+|goto||"/ss goto"|hyperconomy.admin|Teleports you to the currently selected shop.|

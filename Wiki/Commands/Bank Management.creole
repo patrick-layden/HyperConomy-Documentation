@@ -1,0 +1,17 @@
+===Hcbank Command===
+|//Command//|//Aliases//|//Examples//|//Description//|
+|/hcbank [parameter]|/bank|Varies|This command manages HyperConomy banks.|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|deposit [bank] [amount]|d|"/hcbank deposit bank1 1000"|hyperconomy.bank|Deposits the specified amount into the bank.  You must be at least a bank member to do this.|
+|withdraw [bank] [amount]|w|"/hcbank withdraw bank1 50.5"|hyperconomy.bank|Withdraws the specified amount from the bank.  You must be at least a bank member to do this.|
+|info (bank)|i|"/hcbank i bank1"|hyperconomy.bank or hyperconomy.viewbanks|If a bank is specified the command displays the bank members, owners, and balance.  For this command to work you either need to be the bank's owner or have the hyperconomy.viewbanks permission.  If no bank is specified the command displays which banks you're a member of and which banks you're and owner of.|
+|top||"/hcbank top"|hyperconomy.viewbanks|Displays the top bank balances on the server.
+|create [name]|c|"/hcbank create bank1"|hyperconomy.bank|Creates a new bank with the specified name.|
+|delete [name]||"/hcbank delete bank1"|hyperconomy.bank|Deletes the bank with the specified name.  If a shop or economy depends on the bank, the ownership of the shop/economy must first be changed.  If the bank has funds in it when it is deleted they will be distributed evenly between the bank's owners.|
+|rename [name] [new name]||"/hcbank rename bank1 bank2"|hyperconomy.bank|Renames the specified bank to the new name.|
+|addmember [bank] [member]|am|"/hcbank addmember bank1 member1"|hyperconomy.bank|Adds the specified player to the bank as a member.  You must be a bank owner to do this.|
+|removemember [bank] [member]|rm|"/hcbank removemember bank1 member1"|hyperconomy.bank|Revokes bank membership for the specified player.  You must be a bank owner to do this.|
+|addowner [bank] [owner]|ao|"/hcbank addowner bank1 RegalOwl"|hyperconomy.bank|Makes the specified player an owner of the bank.  You must be a bank owner to do this.|
+|removeowner [bank] [owner]|ro|"/hcbank removeowner bank1 RegalOwl"|hyperconomy.bank|Revokes bank ownership for the specified player.  You must be a bank owner to do this.|

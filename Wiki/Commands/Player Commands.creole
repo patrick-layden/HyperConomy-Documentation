@@ -1,0 +1,20 @@
+==Player Commands==
+|=Command|=Aliases|=Permission|=Description|
+|/buy [name] (amount/"max")|/by|hyperconomy.buy|Buys the selected objects(s). If no amount parameter is given, 1 of the chosen object is bought. If "max" is given as the amount parameter, it buys as many of an item as your inventory can hold. If an enchantment is specified it will be applied to the currently held item.|
+|/hb (amount/"max")|/heldbuy|hyperconomy.buy|Buys an amount of the item you're holding. If no amount parameter is given, 1 of the chosen item is bought. If "max" is given as the amount parameter, it buys as many of an item as your inventory can hold.|
+|/sell [name] (amount/"max")|/sl|hyperconomy.sell|Sells items. If no amount parameter is specified, it sells one of the specified item. Otherwise, it sells the specified amount. If "max" is given it will sell all of the specified item from your inventory. For instance, "/sell lapisblock max" would sell every lapis block in your inventory.  If an enchantment is specified it will be removed from the currently held item.|
+|/hs (amount/"max")|/heldsell|hyperconomy.sell|Sells the given amount of the item you're holding. This command will prioritize the item/item stack that is in your hand over other items, selling it first. If "max" is given as the parameter it will sell all of the item that you're holding.|
+|/sellall||hyperconomy.sellall|This command will sell every item in your inventory (except enchanted items or items that are not available in the current shop, et cetera.)|
+|/value [name] (amount or enchantment class)|/vl|hyperconomy.value|Gets information about an item's value. If items are in your inventory with damage, /value will take that into account. If no amount parameter is specified it gives the value for one of the chosen item.  For enchantments an enchantment class can be specified to get the value for an enchantment on a specific material.|
+|/hv (amount)|/heldvalue|hyperconomy.value|Gets information about the value of the item you're holding. It displays the cost to sell the specified amount, the cost to buy it, and the amount of the item that the global shop currently has available.  This command will take into account damage to items and reduce the value accordingly.|
+|/iteminfo (name)|/ii|hyperconomy.info|Displays information about the item you're holding if no parameter is given. If a name is provided the command will provide information on the specified object.|
+|/topitems (page)|/ti|hyperconomy.top|Lists the items in your current economy with the most stock. If no page parameter is given it defaults to page 1. "/topitems 2" would go to the second page and so on. If you are in a shop, only items in that shop will be displayed.|
+|/topenchants (page)|/te|hyperconomy.top|The same as the /topitems command except for enchantments.|
+|/browseshop [Search String] (page)|/bs|hyperconomy.top|Displays items in your current economy or items in a shop if you are in one. If you're in a shop it will only display items available in that shop. /browseshop sorts items in alphabetical order and puts them into multiple pages if there are too many to fit on one page. It also displays the stock and purchase price for the object.|
+|/xpinfo|/xpi|hyperconomy.info|Displays information about experience.|
+|/hc||hyperconomy.use|Displays command help for HyperConomy.|
+|/hcbalance (account)|/hcb|hyperconomy.use|Displays the balance of your account or the balance of the specified account.|
+|/hcpay [account] [amount]|/hcp|hyperconomy.pay|Pays the specified account the given amount and removes it from your account.|
+|/hctop (page)|/hct|hyperconomy.topbalance|Displays the top server balances.  Specify a page to view it.|
+|/economyinfo|/ei|hyperconomy.use|Displays your current economy.|
+|/manageshop (arg 1) (arg 2) (arg n)|/ms|varies|Manages player shops.  Check the player shop management page for more information|

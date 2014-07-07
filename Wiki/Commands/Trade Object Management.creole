@@ -1,0 +1,18 @@
+===Hcset Command===
+|//Command//|//Aliases//|//Examples//|//Description//|
+|/hcset [parameter] [...]|/hcs|hyperconomy.admin|This command manages HyperConomy object settings. (items, enchantments, exp, etc)|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|name [object] [new name]||"/hcs name diamond Diamond"|hyperconomy.admin|Renames the specified object to the given new name.  This is the internal name, not the name that displays for players and admins.  To set the display name use the displayname sub-command.|
+|displayname [object] [new name]|dn|"/hcs displayname ice Ice"|hyperconomy.admin|Renames the specified object to the given new name.  This is the display name which will be used in most HyperConomy response messages.|
+|ceiling [name] [ceiling]|c|"/hcs ceiling dirt 20"|hyperconomy.admin|This option sets the price ceiling for the given object.|
+|static [name or ("all:copy", "all:true", or "all:false")]|stat|"/hcs static dirt", "/hcs static all:copy", "/hcs static all:false"|hyperconomy.admin|This option toggles the given objects static pricing status.  If one of the 3 special arguments is given ("all:copy", "all:true", or "all:false") all objects in the given economy are set to the same static status.  If the copy option is used all objects are set to static pricing and their static prices are set to be the same as their initial prices.|
+|stock [name or ("all", or "all:median")]|s|"/hcs stock dirt 26", "/hcs stock all 100", "/hcs stock all:median"|hyperconomy.admin|This option sets the stock for the given object.  If "all" is given it sets all objects in the current economy to the given stock.  If "all:median" is given it sets all stocks in the current economy to their median values and disables initial pricing.|
+|startprice [name] [price]|starp|"/hcs startprice dirt 25.5"|hyperconomy.admin|This option sets the initial price for the given object.|
+|staticprice [name] [price]|statp|"/hcs staticprice emerald 200.0"|hyperconomy.admin|This option sets the static price for the given object.|
+|value [name] [value]|v|"/hcs value stone 10.0"|hyperconomy.admin|This option sets the value for the given object.|
+|median [name] [median]|m|"/hcs median brick 1000"|hyperconomy.admin|This option sets the median for the given object.|
+|floor [name] [floor]|f|"/hcs floor dirt 1"|hyperconomy.admin|This option sets the price floor for the given object.|
+|initiation [name or ("all:true" or "all:false")]|init|"/hcs initiation dirt", "/hcs initiation all:true"|hyperconomy.admin|This option toggles the initial pricing status for the given object.  If one of the special options is given it will set all objects in the given economy to use the given initiation status.  "all:true" would set all items in the current economy to use initial pricing, for example.|
+|balance [account] [balance]|b|"/hcs balance RegalOwl 1000"|hyperconomy.admin|This option sets the account balance to the given monetary amount.|

@@ -1,0 +1,28 @@
+===Hyperlog Command===
+|//Command//|//Aliases//|//Examples//|//Description//|
+|/hyperlog [parameters type] [search string] [parameter type 2] [search string 2] etc...|/hl|hyperconomy.admin|This command allows you to search through your server's sales history using a wide variety of search parameters.  You must type the type of parameter and then type your search string afterward.  The available parameters are listed below.|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Description//|
+|player|p|"player regalowl", "p regal"|This parameter refers to the player that initiated the transaction.|
+|since|s|"s 3d", "since 24h", "s 35M"|This parameter specifies transactions which occurred after the specified time.  Time is measured in either minutes, hours, or days. (M, H, and D respectively)|
+|before|b|"before 7d", "b 6H", "before 20m"|This parameter specifies transactions which occurred before the specified time.  Time is measured in either minutes, hours, or days. (M, H, and D respectively)|
+|action|a|"action sale", "a pur", "a s"|This parameter specifies the type of transaction.  Currently either "sale" or "purchase".|
+|object|o|"object diamond", "o stone", "o emer", "object glass"|This parameter specifies the item or enchantment traded in the transaction.|
+|>amount|>a|">amount 100", ">a 1000"|This parameter requires the amount of an object traded to be greater than the amount specified.|
+|<amount|<a|"<amount 100", "<a 1000"|This parameter requires the amount of an object traded to be less than the amount specified.|
+|>money|>m|">money 1000", ">m 10000"|This parameter requires the cost of a transaction to be greater than the amount specified.|
+|<money|<m|"<money 1000", "<m 10000"|This parameter requires the cost of a transaction to be less than the amount specified.|
+|>tax|>t|">tax 1000", ">t 50"|This parameter requires the tax of a transaction to be greater than the amount specified.|
+|<tax|<t|"<tax 1000", "<t 50"|This parameter requires the tax of a transaction to be less than the amount specified.|
+|store|st|"store default", "store regalowl", "st economy_x"|This parameter specifies the store/economy/player that was involved in the transaction.|
+|type|ty|"type initial", "type static", "ty chest"|This parameter specifies the type of pricing that the traded object is a part of.|
+|>id||">id 1000", ">id 50"|This parameter requires the transaction id (unique transaction identifier) to be greater than the amount specified.|
+|<id||"<id 1000", "<id 50"|This parameter requires the transaction id (unique transaction identifier) to be less than the amount specified.|
+
+====Hyperlog Command Examples====
+|//Command//|//Result//|
+|/hyperlog object diamond since 4d before 3d|This will select all transactions involving diamond objects between 3 and 4 days old.|
+|/hl p regalowl a purch ty che|This will select all purchases from player RegalOwl that came from chest shops.|
+|/hl >m 10000 <t 1 a sal|This will select all sales that were of greater value than $10000 that were not taxed.|
+|/hyperlog object stone >amount 1000 before 10d store main type initial action purchase|This will select all purchases of stone that were greater than 1000 before 10 days ago from the main economy where the price was set to initial|

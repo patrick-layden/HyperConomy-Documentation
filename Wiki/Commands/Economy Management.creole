@@ -1,0 +1,10 @@
+===Hceconomy Command===
+|//Command//|//Aliases//|//Examples//|//Description//|
+|/hceconomy [parameter] [...]|/he|hyperconomy.admin|This command manages economies.|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|create [name]||"/hceconomy create econ2"|hyperconomy.admin|Creates a new economy with the specified name.|
+|delete [name]||"/hceconomy delete econ2"|hyperconomy.admin|Deletes the specified economy.|
+|account [name]||"/hceconomy account RegalOwl"|hyperconomy.admin|Sets the default account for the economy.  This account will be used when creating new server shops.|
+|list||"/he list"|hyperconomy.admin|Lists all of the server economies.|

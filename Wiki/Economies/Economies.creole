@@ -1,0 +1,13 @@
+==Economies==
+* An economy is the largest part within HyperConomy.  HyperConomy allows an unlimited number of economies to be created and managed.
+* An economy is comprised of shops, players, and items.
+* Each economy has its own isolated set of items and settings for those items.  This allows each economy to function on its own without influence from other economies.
+* Every shop is in an economy.  When running HyperConomy for the first time shops will be placed in the 'default' economy.
+* The default economy cannot be deleted.  If you would like to use a different economy create it and then change your economy to the new economy before creating shops or changing settings.
+* Every player on the server will become part of an economy when they login for the first time.  A player's economy changes when they enter a shop which is part of a different economy than their current economy.
+* When a player or administrator creates a new shop their current economy will determine the shop's economy.  The shop's economy can be changed with shop management commands.
+* An administrator can manually set a player's economy with the /seteconomy command.  
+* When you are part of an economy, most administrator commands will be applied to that economy and not to others.  For example, if you were to set the stock of an item while a part of economy1, the stock for that same item will only be changed in economy1, but not in default, economy2, etc.
+* Each economy has a default account or bank account attached to it.  By default this account with be 'hyperconomy'.  This default account will be set as the owner of server shops that are created in the economy.
+* Economies allow shops to be part of different towns/kingdoms/etc and allows for trading since the prices in one economy will not necessarily match the prices in another.
+* Check the economy management commands page for economy management commands.  The commands to delete, create, switch and change other settings are found there.
