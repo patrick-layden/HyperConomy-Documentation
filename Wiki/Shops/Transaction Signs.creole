@@ -1,35 +1,35 @@
+==Transaction Signs==
 To use a transaction sign, follow the format below:
 
-Line 1 = [Item or Enchantment Name]
-Line 2 = [Continuation of Item or Enchantment Name]
-Line 3 = [[Sell:Buy]]
-Line 4 = [Amount]
+Line 1 = Item or Enchantment Name\\
+Line 2 = Continuation of Item or Enchantment Name\\
+Line 3 = [Sell:Buy]\\
+Line 4 = Amount\\
 
-Example Sign: (Remove all quotes)
-Line 1 = "Diamond"
-Line 2 = ""
-Line 3 = "[sell:buy]"
-Line 4 = "3"
+Example Sign: (Remove all quotes)\\
+Line 1 = "Diamond"\\
+Line 2 = ""\\
+Line 3 = "[sell:buy]"\\
+Line 4 = "3"\\
 
-Example Sign #2:
-Line 1 = "SPotionof"
-Line 2 = "Swiftness2Ext"
-Line 3 = "[sell:buy]"
-Line 4 = "3"
+Example Sign #2:\\
+Line 1 = "SPotionof"\\
+Line 2 = "Swiftness2Ext"\\
+Line 3 = "[sell:buy]"\\
+Line 4 = "3"\\
 
-[Item or Enchantment Name]
+===Item or Enchantment Name===
 The name of the item or enchantment you want the sign to trade.Format the name as you would like it to appear on the sign.If your item is named "stone" and you put "Stone", or "sToNe" it will still work properly.
 
-[Continuation of Item or Enchantment Name]
+===Continuation of Item or Enchantment Name===
 In most cases, this will remain blank.This line is only to be used if you cannot fit the entire item name on the first line, or if you'd like to format it a specific way.For example, if you have an item called "goldblock", you could put Gold on line 1 and then Block on line 2.Line 2 is designed to give you flexibility and space to format your item names.The [Sell:Buy] must be placed on line 3 and cannot be on this line.Anything in this line will be part of the item/enchantment name.
 
-[Sell:Buy]
+===[Sell:Buy]===
 This is the line that indicates this is a transaction sign.It must be typed exactly as "[Sell:Buy]" on the sign including the brackets.Capitalization does not matter, though.The sign will correct any capitalization errors automatically.
 
-[Amount]
+==[Amount]==
 The amount is simply the amount of the item/enchantment that you want to be traded per click.This has to be an integer on the 4th line with nothing else added.If you're trading enchantments this number is irrelevant and should be set to 1 just so that it makes sense to players.
 
-To delete a transaction sign, crouch and left click it. You will need the hyperconomy.admin permission to do this.
-
-If enabled in the config, the amount on a transaction sign can be changed by scrolling up and down while looking at the sign.
+* To delete a transaction sign, crouch and left click it. You will need the hyperconomy.admin permission to do this.
+* If enabled in the config, the amount on a transaction sign can be changed by scrolling up and down while looking at the sign.
 
