@@ -1,20 +1,15 @@
-Composite Item Basics
+==Composite Item Basics==
+* A composite item is an item that is composed of other items.
+* The components of a composite items are generally the collection of items that form the recipe to create the composite item.
+* The price of a composite item is the sum of the prices of the component items.
+* To use composite items set the option "use-composite-items" to true in config.yml
+* Composite items can be composed of other composite items.
+* A simple example of a composite item would be a diamond block. The component items which create the diamond block would be 9 diamonds and the price of the diamond block would be the price of 1 diamond multiplied by 9.
 
-    A composite item is an item that is composed of other items.
-    The components of a composite items are generally the collection of items that form the recipe to create the composite item.
-    The price of a composite item is the sum of the prices of the component items.
-    Composite items are defined in composites.yml. To use composite items set the option "use-composite-items" to true in config.yml
-    Composite items can be composed of other composite items.
-    A simple example of a composite item would be a diamond block. The component items which create the diamond block would be 9 diamonds and the price of the diamond block would be the price of 1 diamond multiplied by 9.
+==The Purpose of Composites==
+* Composite items allow what some people refer to as price linking, or reverse crafting. This means that, in general, items that are crafted are defined as the sum of their crafting ingredients. This allows the price of composite items to change based on the price of the individual components. This will make the economy more reactive. If a player sells a large number of diamonds, the price of diamond blocks, diamond weapons, diamond armor, and all other items that are composed of diamonds will decrease in price. This will prevent price discrepancies between diamonds and diamond blocks, gold ingots and gold blocks, etc.
 
-_____________________________________________________________________________
-What is the purpose of composite items?
-
-    Composite items allow what some people refer to as price linking, or reverse crafting. This means that, in general, items that are crafted are defined as the sum of their crafting ingredients. This allows the price of composite items to change based on the price of the individual components. This will make the economy more reactive. If a player sells a large number of diamonds, the price of diamond blocks, diamond weapons, diamond armor, and all other items that are composed of diamonds will decrease in price. This will prevent price discrepancies between diamonds and diamond blocks, gold ingots and gold blocks, etc.
-
-_____________________________________________________________________________
-Examples of how composite items work
-
-    A player sells a diamond block to a server shop. This will increase the stock of diamonds by 9, and the stock of diamond blocks by 1. If a player were to then buy a diamond, this will lower the stock of diamonds to 8, and the stock of diamond blocks to 8/9. (Partial stock, less than one diamond block). It will then be impossible to buy the diamond block back, because there will be less than 1 diamond block. Once there is more than one diamond block in the shop again, it can be bought. (Including if there were 1.1 diamond blocks, for instance.)
-    Selling an item to a shop can cause a large cascading change in item stocks, depending on how many composite items use the item. For example, selling 1 oak log to the shop will result in the stock of a large number of items to increase including items such as fences, ladders. bowls, planks, stairs etc. The inverse would also work: if you sold a fence to the shop, that would also increase the number of oak logs and all other related items to the stock. This is what is meant by reverse crafting. A fence could be converted back into a log.
-    Reverse crafting does not work for all items for various reasons. For example, items that are smelted cannot be reverse crafted. (An iron ingot cannot return to iron ore.) This is because a wide variety of fuels can be used to smelt items and the experience gained could result in problems.
+==Examples==
+* A player sells a diamond block to a server shop. This will increase the stock of diamonds by 9, and the stock of diamond blocks by 1. If a player were to then buy a diamond, this will lower the stock of diamonds to 8, and the stock of diamond blocks to 8/9. (Partial stock, less than one diamond block). It will then be impossible to buy the diamond block back, because there will be less than 1 diamond block. Once there is more than one diamond block in the shop again, it can be bought. (Including if there were 1.1 diamond blocks, for instance.)
+* Selling an item to a shop can cause a large cascading change in item stocks, depending on how many composite items use the item. For example, selling 1 oak log to the shop will result in the stock of a large number of items to increase including items such as fences, ladders, bowls, planks, stairs etc. The inverse would also work: if you sold a fence to the shop, that would also increase the number of oak logs and all other related items to the stock. This is what is meant by reverse crafting. A fence could be converted back into a log.
+* Reverse crafting does not work for all items for various reasons. For example, items that are smelted cannot be reverse crafted. (An iron ingot cannot return to iron ore.) This is because a wide variety of fuels can be used to smelt items and the experience gained by crafting smelted items, uncrafting them, and then recrafting them would allow for an infinite experience exploit.
