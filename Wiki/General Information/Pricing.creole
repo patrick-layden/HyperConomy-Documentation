@@ -1,28 +1,13 @@
 ==Initial Pricing==
-* By default, all items in HyperConomy start in initial pricing mode.  Initial pricing is a temporary price cap or ceiling 
-that keeps prices low until a reasonable amount of the item has been sold to the shop.  The price of an item will not change
-while it is in dynamic pricing mode.  Due to the nature of HyperConomy's pricing formula, an item with 0 stock
-has an infinite sell value when in dynamic pricing mode.  Initial pricing is there to fix this issue.  
-Tradeable objects will automatically switch to dynamic pricing mode whenever the dynamic price is less than
-the initial price.  You can see how many items remain before transitioning to dynamic pricing mode with the /os [object] 
-command.  If you'd like to bypass initial pricing mode entirely and make your economy dynamic immediately, you can do this
-by pre-stocking your shop with the "/hcs stock all:median" command.
+* By default, all items in HyperConomy start in initial pricing mode.  Initial pricing is a temporary price cap or ceiling that keeps prices low until a reasonable amount of the item has been sold to the shop.  The price of an item will not change while it is in dynamic pricing mode.  Due to the nature of HyperConomy's pricing formula, an item with 0 stock has an infinite sell value when in dynamic pricing mode.  Initial pricing is there to fix this issue. Tradeable objects will automatically switch to dynamic pricing mode whenever the dynamic price is less than the initial price.  You can see how many items remain before transitioning to dynamic pricing mode with the /os [object] command.  If you'd like to bypass initial pricing mode entirely and make your economy dynamic immediately, you can do this by pre-stocking your shop with the "/hcs stock all:median" command.
 
 ==Static Pricing==
-* Static pricing mode is a permanent, non-dynamic pricing mode that can be enabled for some items or all items.  If you
-would like to skip the dynamic pricing aspect of HyperConomy and set custom static prices for all items, static pricing mode
-will accomodate this.  To set all items to static pricing mode in your current economy use the command 
-"/hcs static all:copy".
+* Static pricing mode is a permanent, non-dynamic pricing mode that can be enabled for some items or all items.  If you would like to skip the dynamic pricing aspect of HyperConomy and set custom static prices for all items, static pricing mode will accomodate this.  To set all items to static pricing mode in your current economy use the command "/hcs static all:copy".
 
 ==Dynamic Pricing==
-* With the default settings, dynamic pricing mode will automatically be activated for all items once they reach a certain
-stock level.  Once in dynamic mode, the price of the item will vary depending on how much stock is available for that item.
-As the stock approaches 0, the price will approach infinity, and as the stock approaches infinity, the price will approach 0.
-This means that it is essentially impossible to purchase the final item in a shop whenever it is in dynamic pricing mode.  
+* With the default settings, dynamic pricing mode will automatically be activated for all items once they reach a certain stock level.  Once in dynamic mode, the price of the item will vary depending on how much stock is available for that item. As the stock approaches 0, the price will approach infinity, and as the stock approaches infinity, the price will approach 0. This means that it is essentially impossible to purchase the final item in a shop whenever it is in dynamic pricing mode.  
 The pricing formula, for those that are interested, is more or less as follows: price = (median * value) / stock.
 
 ==Custom Pricing==
-* Custom pricing is available for individual non-admin players when they create chest shops and player shops.  Using the
-/manageshop command, players can override the economy item price and set custom static prices for any or all of the items
-in their player shop(s).  By defining a price on a chest shop sign, players can apply a custom price to all items in that 
+* Custom pricing is available for individual non-admin players when they create chest shops and player shops.  Using the /manageshop command, players can override the economy item price and set custom static prices for any or all of the items in their player shop(s).  By defining a price on a chest shop sign, players can apply a custom price to all items in that 
 chest shop.
