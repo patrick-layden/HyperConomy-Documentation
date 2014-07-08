@@ -1,8 +1,8 @@
-* A server shop is a shop that is created with the /setshop command. It is a cuboid region defined by two points, p1 and p2. (These are set with the /setshop command.) It can only be created by admins with the hyperconomy.admin permission. A server shop is meant to be created by an administrator and then remain a permanent, unchanging shop that can not be changed by normal players.
-* When entering a server shop, a customizable message (/setmessage command) will display. When exiting the shop, the shop exit message will display. (This can be disabled in config.yml)
+==Server Shops==
+* A server shop is a shop that is created with the /servershop command. It is an invisible cuboid region defined by two points, p1 and p2. (These are set with the /servershop p1 and /servershop p2 commands.) It can only be created by admins with the hyperconomy.admin permission. A server shop is meant to be created by an administrator and then remain a permanent, unchanging shop that can not be changed by normal players.
+* When entering a server shop, a customizable message will display. When exiting the shop, the shop exit message will display. (This can be disabled in config.yml)
+* If a player enters a shop that is part of a different economy than their own, their economy will be changed to the economy of the shop.  This is the only way for a regular player to change their economy.
+* Every shop is attached to an economy.  Its economy is where it obtains all of its item settings and prices.  Items and other tradeable objects aren't really a part of a server shop, but rather they are part of an economy.  A shop is merely a method to access an economy.
 * Multiple shops can be attached to the same economy, meaning if shop1 and shop2 are both in the "default" economy, selling 1 stone to shop1 will increase the stock of stone in shop2.
-* Each server shop is a part of an economy which contains all of the items, stocks, and prices for the shop.
-* A shop's economy can be changed manually be an admin by using the /setshopeconomy command. This will change all of the settings for all items in the shop.
-* The settings and stocks of items in the shop can be viewed with the /objectsettings command.
-* A shop's economy can be changed manually be an admin by using the /setshopeconomy command.
-* If you would like to pre-stock a shop and set all items to use dynamic pricing, use the /setstockmedianall command.
+* A shop's economy can be changed manually be an admin by using the /servershop command.
+* The settings and stocks of items in the shop can be viewed with the /objectsettings command while you are a part of the shop's economy.
