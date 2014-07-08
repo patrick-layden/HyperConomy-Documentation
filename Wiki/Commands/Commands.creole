@@ -3,3 +3,13 @@
 |[something]|Required|
 |(something)|Optional|
 
+==Commands==
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Player%20Commands.creole|Player Commands]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Player%20Shop%20Management.creole|Player Shop Management]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Server%20Shop%20Management.creole|Server Shop Management]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Trade%20Object%20Management.creole|Trade Object Management]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Administrator%20Commands.creole|Administrator Commands]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Bank%20Management.creole|Bank Management]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Economy%20Management.creole|Economy Management]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Log%20Commands.creole|Log Commands]]\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Data%20Management.creole|Database Management]]\\
