@@ -1,6 +1,7 @@
 ==Transaction Signs==
-To use a transaction sign, follow the format below:
+Signs in Minecraft have 4 lines. To use a transaction sign, follow the format below for each line.
 
+===Examples===
 Line 1 = Item or Enchantment Name\\
 Line 2 = Continuation of Item or Enchantment Name\\
 Line 3 = [Sell:Buy]\\
