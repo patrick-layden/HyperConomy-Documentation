@@ -1,23 +1,24 @@
 ==Transaction Signs==
 Signs in Minecraft have 4 lines. To use a transaction sign, follow the format below for each line.
 
-===Examples===
-Line 1 = Item or Enchantment Name\\
-Line 2 = Continuation of Item or Enchantment Name\\
-Line 3 = [Sell:Buy]\\
-Line 4 = Amount\\
 
-Example Sign: (Remove all quotes)\\
-Line 1 = "Diamond"\\
-Line 2 = ""\\
-Line 3 = "[sell:buy]"\\
-Line 4 = "3"\\
+===Format===
+|Line 1|Item or Enchantment Name|
+|Line 2|Continuation of Item or Enchantment Name|
+|Line 3|[Sell:Buy]|
+|Line 4|Amount|
 
-Example Sign #2:\\
-Line 1 = "SPotionof"\\
-Line 2 = "Swiftness2Ext"\\
-Line 3 = "[sell:buy]"\\
-Line 4 = "3"\\
+===Example #1===
+|Line 1|Diamond|
+|Line 2||
+|Line 3|[sell:buy]|
+|Line 4|3|
+
+===Example #2===
+|Line 1|SPotionof|
+|Line 2|Swiftness2Ext|
+|Line 3|[sell:buy]|
+|Line 4|3|
 
 ===Item or Enchantment Name===
 The name of the item or enchantment you want the sign to trade. Format the name as you would like it to appear on the sign. If your item is named "stone" and you put "Stone", or "sToNe" it will still work properly.
