@@ -1,6 +1,10 @@
 ==Transaction Signs==
-Signs in Minecraft have 4 lines. To use a transaction sign, follow the format below for each line.
-
+* Transaction signs are signs that allow players to right or left click in order to trade with an economy.
+* Transaction signs run using only data on the sign.  They are not stored in the database or in any file.
+* Whatever economy the trader is in is the economy that the sign will trade with.
+* To force the sign to trade always in one economy, place it inside a shop so that the player's economy is updated to be the same as the shop's when trading with the sign.  If you only have one economy, this is irrelevant.
+* To remove a transaction sign, shift left click it with the hyperconomy.admin permission.
+* Signs in Minecraft have 4 lines. To use a transaction sign, follow the format below for each line.
 
 ===Format===
 |Line 1|Item or Enchantment Name|
