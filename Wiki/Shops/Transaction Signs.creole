@@ -1,5 +1,6 @@
 ==Transaction Signs==
-* Transaction signs are signs that allow players to right or left click in order to trade with an economy.
+* Transaction signs are signs that allow players to buy (right click) or sell (left click) in order to trade with an economy
+* There are three types of signs: buy signs, sell signs, and sell:buy signs.  Sell signs need "[Sell]" to be written on line 3, buy signs "[Buy]", and sell/buy signs "[Sell:Buy]".
 * Transaction signs run using only data on the sign.  They are not stored in the database or in any file.
 * Whatever economy the trader is in is the economy that the sign will trade with.
 * To force the sign to trade always in one economy, place it inside a shop so that the player's economy is updated to be the same as the shop's when trading with the sign.  If you only have one economy, this is irrelevant.
@@ -9,13 +10,13 @@
 ===Format===
 |Line 1|Item or Enchantment Name|
 |Line 2|Continuation of Item or Enchantment Name|
-|Line 3|[Sell:Buy]|
+|Line 3|"[Sell:Buy]" or "[Sell]" or "[Buy]"|
 |Line 4|Amount|
 
 ===Example #1===
 |Line 1|Diamond|
 |Line 2||
-|Line 3|[sell:buy]|
+|Line 3|[buy]|
 |Line 4|3|
 
 ===Example #2===
