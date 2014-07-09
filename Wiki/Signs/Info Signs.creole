@@ -3,6 +3,7 @@
 * Information signs allow the display of a large variety of information including item prices, stock, or various other settings.  The available sign types are below.  
 * Information signs will be created in the economy that you're currently in.  If you'd like to create signs in a different economy, change your economy with /seteconomy [name] and then create the sign.
 * The signs will update automatically whenever an item price or setting changes.
+* Signs in Minecraft have 4 lines. To use an information sign, follow the format below for each line.
 
 ===Format===
 |Line 1|Item or Enchantment Name|
