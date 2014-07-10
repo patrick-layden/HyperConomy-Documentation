@@ -53,12 +53,13 @@ This changes the economy that the currently selected server shop belongs to.
 *Goto: /ss goto\\
 This teleports you to the currently selected shop.\\
 
-==Additional Information==
+*View all server shop commands.\\
+[[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Server%20Shop%20Management.creole|Click Here]]
 
-*Server shops can only be created by admins with the hyperconomy.admin permission and cannot be managed by ordinary players.
+==Additional Information==
 
 * If a player enters a shop that is part of a different economy than their own, their economy will be changed to the economy of the shop.  This is the only way for a regular player to change their economy.
 
 * A server shop is an interface to access and trade with an economy. Its economy is where it obtains all of its item settings and prices.   Multiple shops can be attached to the same economy, meaning if shop1 and shop2 are both in the "default" economy, selling 1 stone to shop1 will increase the stock of stone in shop2.
 
-* The settings and stocks of items in the shop can be viewed with the /objectsettings command while you are a part of the shop's economy.
+* The settings and stocks of items in the shop can be viewed with the /objectsettings command while you are a part of the shop's economy. Their settings can be changed with the /hcset command.
