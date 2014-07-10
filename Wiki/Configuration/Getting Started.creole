@@ -22,7 +22,7 @@ If you're using an older build of craftbukkit or another server software you wil
 If you would like a global shop to be accessible anywhere on your server, you can set use-shops to false in config.yml.  This will enable the global shop and disable player and server shops.
 
 ===Create A New Economy===
-An economy is the most basic structure in HyperConomy.  Economies contain settings and prices for items.  You can read more about economies [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Economies/Economies.creole|here]].
+An economy is the most basic structure in HyperConomy.  Economies contain settings and prices for items.  You can read more about economies [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Economies/Economies.creole|here]].  If you'd rather not create an economy you can use the "default" economy which is created automatically when you start HyperConomy for the first time.  To manage economies you can use the [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Commands/Economy%20Management.creole|/hceconomy command]].
 
 ===Setup a Shop===
 HyperConomy supports a variety of shops.  If you'd like to set up a shop for players, use a server shop.  You can read more about server shops [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Shops/Server%20Shops.creole|here]].  To read about other types of shops, click [[https://github.com/RegalOwl/HyperConomy-Documentation/tree/master/Wiki/Shops|here]].
