@@ -12,15 +12,20 @@ Make sure to upgrade to the latest version.  The latest version should support o
 To support older Craftbukkit builds make sure to set uuid-support to false in config.yml.
 
 If you're still getting errors after using the above upgrade path, or your errors are unrelated to upgrading, start disabling features in HyperConomy.
-This may be unnecessary if HyperConomy is starting properly but is helpful if you're having trouble with errors on startup.  Once HyperConomy is running, export
-your database to CSV files with the command "/hcdata exportcsv all".  All data in your database should be exported to the HyperConomy/import_export folder.
-Look in your error message to see if it is related to a particular feature in HyperConomy.  If it mentions displays or item display, check the displays table.
-If it mentions shops, check the shops table, and so on.  It may be helpful to allow a HyperConomy to generate a new folder and database.  From there you can
+This may be unnecessary if HyperConomy is starting properly but is helpful if you're having trouble with errors on startup or if you'd like to isolate where the errors are coming from.  
+
+Once HyperConomy is running, export your database to CSV files with the command "/hcdata exportcsv all".  
+All data in your database should be exported to the HyperConomy/import_export folder.
+Look in your error message to see if it is related to a particular feature in HyperConomy.  If it mentions displays or item display, check the displays CSV.
+If it mentions shops, check the shops CSV, and so on.  
+
+It may be helpful to allow a HyperConomy to generate a new folder and database.  From there you can
 create a new shop, or item display, or whatever and then export the data again.  (After moving the original export to a different folder, of course.)  With the 
 fresh install export data you can compare your old data to the new data to look for problems/differences.  If you spot the problem edit the CSV file, correcting it.  Make sure
 to not alter the CSV format.  Some editors tend to do this.  I'd recommend LibreOffice Calc.  When you save the edited CSV file make sure to select Save As -> "edit filter
-settings".  Make sure the text delimiter is a quote and the field delimiter is a comma.  Check the "quote all text cells" option as well.  With your fixed CSV
-file, place it in the import_export folder either by itself or with all of your other database export CSV files.  Reimport the fixed data into HyperConomy with
+settings".  Make sure the text delimiter is a quote and the field delimiter is a comma.  Check the "quote all text cells" option as well.  
+
+Place your fixed CSV file in the import_export folder either by itself or with all of your other database export CSV files.  Reimport the fixed data into HyperConomy with
 /hcdata importcsv all or /hcdata importcsv [name of table].  The name of the table is the same as the name of the CSV files.
 
 If the above still does not help try running a fresh install of HyperConomy.  If it works you can be sure that your problem is either a data issue, or an upgrade
