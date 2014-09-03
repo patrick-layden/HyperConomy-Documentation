@@ -6,7 +6,7 @@ The upgrade path is as follows:
 
 |Less than 0.971|Upgrade to 0.971|
 |Less than 0.973 and greater than 0.971|Upgrade to 0.973|
-|Greater than 0.973|Upgrade to 0.974.56|
+|Greater than 0.973|Upgrade to 0.974.57|
 
 Make sure to upgrade to the latest version.  The latest version should support older Craftbukkit builds so that shouldn't be a concern.  
 To support older Craftbukkit builds make sure to set uuid-support to false in config.yml.
