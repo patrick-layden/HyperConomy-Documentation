@@ -2,12 +2,14 @@
 Having trouble with HyperConomy?  Hopefully this page can help.
 
 If you're getting errors after upgrading to a new HyperConomy build, first make sure that you've followed the recommended upgrade path.  
+HyperConomy has changed significantly over time, preventing some upgrade paths from working.  
 The upgrade path is as follows:
 
-|Less than 0.971|Upgrade to 0.971|
-|Less than 0.973 and greater than 0.971|Upgrade to 0.973|
-|Greater than 0.973 and less than 0.974.57|Upgrade to 0.974.57|
-|Equal to 0.974.57|Upgrade to 0.975|
+|=Current Build|=Upgrade To|
+|Less than .971|.971|
+|Between .971 and .973|.973|
+|Between .973 and .974.57|.974.57|
+|.974.57|.975|
 
 Make sure to upgrade to the latest version.  The latest version should support older Craftbukkit builds so that shouldn't be a concern.  
 To support older Craftbukkit builds make sure to set uuid-support to false in config.yml.
