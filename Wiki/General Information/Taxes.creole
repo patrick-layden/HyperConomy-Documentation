@@ -11,4 +11,6 @@ Static tax is applied when items are purchased in static pricing mode.  Any item
 Enchantment tax is applied when enchantments are purchased.  Enchantment tax will apply to all enchantments unless they are in static pricing mode.
 
 ==Sales Tax==
-Sales tax has two modes, regular or dynamic.  Regular mode operates just like purchase taxes except it's charged for sales.
+Sales tax has two modes, regular or dynamic.  Regular mode operates just like purchase taxes except it's charged for sales.  Sales tax will be taken out of the sale value.  For instance, if you sell something for $8 and are taxed $1, you will only actually get $7 for the sale.  
+
+Dynamic sales tax can be enabled and configured in config.yml in the tax section.
