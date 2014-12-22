@@ -37,4 +37,7 @@ Player commands are the most basic commands which everyone can use such as /buy,
 To learn about other features, look through the rest of the wiki [[https://github.com/RegalOwl/HyperConomy-Documentation/tree/master/Wiki|here]].
 
 ===Have A Question?===
-You can read the FAQ [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/FAQ.creole|here]].  If you think something should be included in the FAQ feel free to create a ticket or let me know on the HyperConomy BukkitDev page.
+You can read the FAQ [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/FAQ.creole|here]].  If you think something should be included in the FAQ feel free to create a ticket or let me know on the HyperConomy BukkitDev page.  
+
+===Have A Problem?===
+Feel free to create a ticket here on Github.  I'll get to it as soon as I can.  It may also help to [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/General%20Information/Troubleshooting.creole|check the troubleshooting page]].
