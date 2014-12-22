@@ -1,0 +1,8 @@
+==Upgrading==
+Due to constant redesign and code changes I've had to remove upgrade support for older builds at several points.  In order to safely upgrade HyperConomy from an older build run your server once with each of these builds as described below until you're on the latest version.
+
+|=Current Build|=Upgrade To|
+|Less than .971|.971|
+|Between .971 and .973|.973|
+|Between .973 and .974.57|.974.57|
+|Between .974.57 and .975.1|.975.1|
