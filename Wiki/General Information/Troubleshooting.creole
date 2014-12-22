@@ -9,7 +9,7 @@ The upgrade path is as follows:
 |Less than .971|.971|
 |Between .971 and .973|.973|
 |Between .973 and .974.57|.974.57|
-|.974.57|.975.1|
+|Between .974.57 and .975.1|.975.1|
 
 Make sure to upgrade to the latest version.  The latest version should support older Craftbukkit builds so that shouldn't be a concern.  
 To support older Craftbukkit builds make sure to set uuid-support to false in config.yml.
