@@ -5,4 +5,4 @@ Due to constant redesign and code changes I've had to remove upgrade support for
 |Less than .971|.971|
 |Between .971 and .973|.973|
 |Between .973 and .974.57|.974.57|
-|Between .974.57 and .975.1|.975.1|
+|Between .974.57 and .975.1|.975.2|
