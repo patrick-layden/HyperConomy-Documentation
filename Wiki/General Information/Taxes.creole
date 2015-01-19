@@ -1,3 +1,5 @@
+All taxes in HyperConomy are deposited in the default server shop account which is defined in config.yml.  By default it's called "hyperconomy".  You can make this account whatever you want including player accounts or a player controlled bank.
+
 ==Purchase Tax==
 Purchase tax is applied when items are purchased in dynamic pricing mode.  If the tax rate were 3%, the tax charged for the purchase will be 3% of the purchase price.
 
@@ -13,4 +15,4 @@ Enchantment tax is applied when enchantments are purchased.  Enchantment tax wil
 ==Sales Tax==
 Sales tax has two modes, regular or dynamic.  Regular mode operates just like purchase taxes except it's charged for sales.  Sales tax will be taken out of the sale value.  For instance, if you sell something for $8 and are taxed $1, you will only actually get $7 for the sale.  
 
-Dynamic sales tax can be enabled and configured in config.yml in the tax section.
+Dynamic sales tax can be enabled and configured in config.yml in the tax section.  Dynamic sales tax allows poor players to make more money during sales than rich players.  Dynamic tax will only be applied when the player's balance is between the money-floor and money-cap defined in config.yml.  The maximum tax rate defined in config.yml will be applied when the player's balance is equal to the money-cap.  If the max tax is set to 100 percent the player will no longer make money when selling items to a server shop.  At the money floor no tax will be applied.  The tax rate will gradually increase as the player's balance approaches the money cap.
