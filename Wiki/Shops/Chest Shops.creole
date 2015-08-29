@@ -1,8 +1,8 @@
 * Chest shops are chests with a sign above them that function as shops.
 * All players have access to chest shops unless the hyperconomy.chestshop permission is removed.
-* Chest shops are different from command based region shops in that there are no commands required to trade with them. A left click checks the price and a right click or shift click purchases.
+* Chest shops are different from command based region shops in that there are no commands required to trade with them. * For the person that owns the chest, it acts exactly as a normal chest does. For everyone else, a left click gives price information, a right click buys or sells one item, and a shift click buys or sells the amount of an item in the currently selected item stack.
 * Chest shops do not charge tax.
-* If a custom price is set on the first line of the chest shop, the chest shop is allowed to trade items that are unknown to HyperConomy. This could be useful for FTB or Tekkit.
+* If a custom price is set on the first line of the chest shop, the chest shop is allowed to trade items that are unknown to HyperConomy.
 
 To create a chest shop you must place a properly formatted sign above a chest like this:
 
@@ -41,11 +41,9 @@ line 3 = ""
 line 4 = ""
 (This chest will only sell items for $70.50 per item).
 
-    For the person that owns the chest, it acts exactly as a normal chest does. For everyone else, a left click gives price information, a right click buys or sells one item, and a shift click buys or sells the amount of an item in the currently selected item stack.
-    To make a chest it must not have any items in it initially. This is to help prevent abuse in which players place signs above other players' chests.
-    Chests do not tax players, and transactions do not affect the global price of items/enchantments. Chests do, however, trade items at the current market values. This makes it far easier to use for players than many chest shop plugins, as there is little set up required, each chest can store any number of different items, and the trading is entirely visual without any commands.
-    By default, chest shops can be built anywhere by any player. If you'd prefer the chest shops to be built only in designated areas, create a shop area and then turn on the "require-chest-shops-to-be-in-shop" option.
-    The chest shops should be invulnerable as long as you do not attach the sign to ice, sand, gravel, natural leaves, or another sign. Let me know if you find any flaws in the chest protection.
-    When selling items to a chest shop, you are only able to sell items to a chest that are already in a chest. This is to prevent players from selling each other all of their junk. For example, if you have a [Sell] chest with a diamond in it, people will only be able to sell diamonds to that chest. They will not be able to buy the diamonds or sell any other item to the chest. If you have a [Buy] chest with only diamonds, the opposite will be true: players will only be able to purchase diamonds from that chest. If it's a [Trade] chest, on the other hand, players can both buy and sell diamonds from the chest. If all of the diamonds are purchased from a trade chest, it will no longer be possible to sell diamonds to the chest. If you would like a chest that will always purchase an item for you, use a sell chest because a trade chest may run out.
-    Chest shops allow the purchase of enchantments but not the sale. This is simply to avoid commands and because it is very unlikely that a chest would have a matching combination of items/enchantments. When purchasing enchantments, you must hold the item you want to enchant and then right click on the enchanted item that you would like to purchase the enchantments from. This will automatically purchase all enchantments from the selected item and place them on the item that you're holding.
-    To remove a chest shop, if you are the owner, crouch/sneak and then destroy the sign above it.
+Other notes:  
+* To remove a chest shop, if you are the owner, crouch/sneak and then destroy the sign above it.
+* To make a chest it must not have any items in it initially. This is to help prevent abuse in which players place signs above other players' chests.
+* Chest transactions do not affect the global price of items/enchantments. Chests do, however, trade items at the current market values. This makes it far easier to use for players than many chest shop plugins, as there is little set up required, each chest can store any number of different items, and the trading is entirely visual without any commands.
+* By default, chest shops can be built anywhere by any player. If you'd prefer the chest shops to be built only in designated areas, create a shop area and then turn on the "require-chest-shops-to-be-in-shop" option.
+* When selling items to a chest shop, you are only able to sell items to a chest that are already in a chest. This is to prevent players from selling each other all of their junk. For example, if you have a [Sell] chest with a diamond in it, people will only be able to sell diamonds to that chest. They will not be able to buy the diamonds or sell any other item to the chest. If you have a [Buy] chest with only diamonds, the opposite will be true: players will only be able to purchase diamonds from that chest. If it's a [Trade] chest, on the other hand, players can both buy and sell diamonds from the chest. If all of the diamonds are purchased from a trade chest, it will no longer be possible to sell diamonds to the chest. If you would like a chest that will always purchase an item for you, use a sell chest because a trade chest may run out.
