@@ -5,7 +5,7 @@ The full version of HyperConomy contains a built in GUI (Graphical User Interfac
 The GUI has two modes, local mode and remote mode.  When starting the GUI for the first time it will run in local mode by default.  Local mode connects the GUI to whatever database is configured in the local config.yml HyperConomy configuration file.  If you haven't configured a database, it will use the automatically generated SQLite HyperConomy.db file in your HyperConomy folder.  Remote GUI mode allows the GUI to connect to, and modify, a remote HyperConomy install that's running on a web accessible Minecraft server.  
 
 ==Run the GUI==
-To run the GUI simply double click on your HyperConomy.jar file.  On Linux distros you may need to mark it executable with: //chmod +x ./HyperConomy.jar//
+To run the GUI simply double click on your HyperConomy.jar file.  On Linux distros you may need to mark it executable with:\\ //chmod +x ./HyperConomy.jar//
 
 ==Remote GUI==
 In order to run the remote GUI, first configure your remote server's HyperConomy.  Stop your server or disable HyperConomy (/hc disable) and then edit config.yml.  In the remote-gui section of config.yml, set server to true and enable to true.  By default the remote GUI server will run on port 3313.  If this port is in use already, or your firewall is blocking it, change the listen-port option to an available port and make sure it's not blocked by your firewall.  Your server should have generated a secure and random auth-key.  Copy this key and save it for later.  You can also change it to something easier to remember if you'd like.  The remote-server-ip option and remote-server-port option can be ignored; they are for the client side.  Your remote server's config section should look similar to this:    
@@ -20,8 +20,12 @@ remote-gui:\\
   refresh-rate-ms: 20000\\
   auth-key: your_auth_key_goes_here\\
   
-After saving your config and starting HyperConomy (/hc enable), run your local HyperConomy.jar GUI once in order to generate a HyperConomy folder.  Close the GUI after running it.  In your HyperConomy folder edit the config.yml file that's generated.  Set your remote-server-ip address to be the IP of your remote server, and remote-server-port to be the port you set in your remote server's config.yml file.  Use the auth-key that you saved earlier and replace whatever auth-key the GUI generated.  The auth-key on your client and server should match.  Save the config file and restart the GUI.  
+After saving your config and starting HyperConomy (/hc enable), run your local HyperConomy.jar GUI once in order to generate the HyperConomy folder.  Close the GUI after running it.  In your HyperConomy folder edit the config.yml file that's generated.  Set your remote-server-ip address to be the IP of your remote server, and remote-server-port to be the port you set in your remote server's config.yml file.  Use the auth-key that you saved earlier and replace whatever auth-key the GUI generated.  The auth-key on your client and server should match.  Save the config file and restart the GUI.  
 
-If it worked you will see a Loading... messaged folled by a green Loaded message.  Another icon should say Synchronized.  After the GUI has established a connection with the remote server you can begin editing economies and objects.
+If it worked you will see a Loading... messaged folled by a green Loaded message.  Another icon should say Synchronized.  After the GUI has established a connection with the remote server you can begin editing economies and objects.  If something goes wrong a red Error icon will appear and the error message will appear in the text box at the bottom of the main GUI page.  An invalid key message will appear if your server rejected your auth-key.  Make sure your keys match.
 
 ==Economy Editor==
+The economy editor is the first page that appears when running the GUI.  It allows you to edit [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Economies/Economies.creole|economies]].  You can also delete economies, create new ones, or change the settings for all trade objects within an economy.  
+
+==Object Editor==
+Clicking the edit button in the Economy Editor after selecting an economy brings up the object editor.  The Object Editor allows you to edit trade objects and view their prices.  The prices are displayed at the bottom and do not include tax.  Settings on the right can be edited.  To save your changes click the save button at the bottom.  
