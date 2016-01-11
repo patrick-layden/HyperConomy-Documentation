@@ -10,15 +10,15 @@ To run the GUI simply double click on your HyperConomy.jar file.  On Linux distr
 ==Remote GUI==
 In order to run the remote GUI, first configure your remote server's HyperConomy.  Stop your server or disable HyperConomy (/hc disable) and then edit config.yml.  In the remote-gui section of config.yml, set server to true and enable to true.  By default the remote GUI server will run on port 3313.  If this port is in use already, or your firewall is blocking it, change the listen-port option to an available port and make sure it's not blocked by your firewall.  Your server should have generated a secure and random auth-key.  Copy this key and save it for later.  You can also change it to something easier to remember if you'd like.  The remote-server-ip option and remote-server-port option can be ignored; they are for the client side.  Your remote server's config section should look similar to this:    
 
-remote-gui:
-  enable: true
-  server: true
-  remote-server-ip: 192.168.1.1
-  remote-server-port: 3313
-  listen-port: 3313
-  connection-timeout-ms: 10000
-  refresh-rate-ms: 20000
-  auth-key: your_auth_key_goes_here
+remote-gui:\\
+  enable: true\\
+  server: true\\
+  remote-server-ip: 192.168.1.1\\
+  remote-server-port: 3313\\
+  listen-port: 3313\\
+  connection-timeout-ms: 10000\\
+  refresh-rate-ms: 20000\\
+  auth-key: your_auth_key_goes_here\\
   
 After saving your config and starting HyperConomy (/hc enable), run your local HyperConomy.jar GUI once in order to generate a HyperConomy folder.  Close the GUI after running it.  In your HyperConomy folder edit the config.yml file that's generated.  Set your remote-server-ip address to be the IP of your remote server, and remote-server-port to be the port you set in your remote server's config.yml file.  Use the auth-key that you saved earlier and replace whatever auth-key the GUI generated.  The auth-key on your client and server should match.  Save the config file and restart the GUI.  
 
