@@ -26,6 +26,8 @@ If it worked you will see a Loading... messaged folled by a green Loaded message
 
 Remote changes that occur on your server will be displayed in the message area at the bottom of the economy editor.  (e.g. Players buying and selling from your shops.)  If you make a change in the GUI the Synchronized message will change to Synchronizing...  Wait until the GUI is synced before closing it.  If you'd like your GUI to sync faster lower the refresh-rate-ms in config.yml.  1000 ms = 1 second.  You can also change the connection-timeout-ms which controls how long the GUI waits before giving up on a connection.  Keep this high if you have a poor internet connection.
 
+Note:  The remote GUI does not currently encrypt its communication.  If you're concerned about server security you may not want to use the remote GUI on an untrusted connection such as an untrusted WiFi network.  It seems unlikely that someone would be determined enough to try to extract the auth-key from network traffic, but if you feel that this is a possiblity you may want to avoid using the remote GUI feature.  If this somehow becomes a serious problem in the future I'll consider setting up encrypted communication.
+
 ==Economy Editor==
 The economy editor is the first page that appears when running the GUI.  It allows you to edit [[https://github.com/RegalOwl/HyperConomy-Documentation/blob/master/Wiki/Economies/Economies.creole|economies]].  You can also delete economies, create new ones, or change the settings for all trade objects within an economy.  
 
