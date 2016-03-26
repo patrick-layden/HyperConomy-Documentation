@@ -1,6 +1,6 @@
 ===Time Effects Command===
 |//Command//|//Aliases//|//Permission//|//Description//|
-|/timeeffect [parameter] [...]|/hcte|hyperconomy.admin|This command manage time effects|
+|/timeeffect [parameter] [...]|/hcte|hyperconomy.admin|This command manage time effects.  Time effects allow item stocks and account balances to change over time based on set rules.|
 
 ====Parameters====
 |//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
