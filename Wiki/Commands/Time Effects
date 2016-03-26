@@ -1,0 +1,29 @@
+===Time Effects Command===
+|//Command//|//Aliases//|//Permission//|//Description//|
+|/timeeffect [parameter] [...]|/hcte|hyperconomy.admin|This command manage time effects|
+
+====Parameters====
+|//Sub-Command//|//Aliases//|//Examples//|//Permission//|//Description//|
+|add [trade object, account, or category] [effect type] [frequency] (increment) (value)|a|"/timeeffect add cobblestone increasestock 10m 10"|hyperconomy.admin|Creates a new time effect with the selected settings.|
+|remove [trade object, account, or category] [effect type]|r|"/hcte remove diamond balancestock"|hyperconomy.admin|Deletes the specified time effect.|
+|list|l|"/timeeffect list 2"|hyperconomy.admin|Lists all time effects by page.|
+
+====Effect Types====
+|//Name//|//Alias//|//Description//|//Example Command//]
+|INCREASE_STOCK|is|Increases the stock for an item by the set increment at the set time frequency.|/timeeffect add redstone increase_stock 1h 50|
+|DECREASE_STOCK|ds|Decreases the stock for an item by the set increment at the set time frequency.|/hcte a steak ds 5h 15|
+|BALANCE_STOCK|bs|Tries to return the stock of an item to the set value.  Changes the stock by the set increment at the set time interval.|/timeeffect add stone balance_stock 1d 100 10000|
+|INCREASE_BALANCE|ib|Increases the balance for an account by the set $ increment at the set time frequency.|/timeeffect add RegalOwl increase_balance 50s 1000|
+|DECREASE_BALANCE|db|Decreases the balance for an account by the set increment at the set time frequency.|/hcte a hyperconomy db 1w 50000|
+|BALANCE_BALANCE|bb|Tries to return the balance of an account to the set $ value.  Changes the balance by the set $ increment at the set time interval.|/hcte a hyperconomy bb 1d 10000 1000000|
+|RANDOM_STOCK|rs|Randomly changes the stock for an item by some value value less than the chosen increment and greater than the negative of that increment at the set time frequency.|/hcte a emerald rs 1h 300|
+|RANDOM_BALANCE|rb|Randomly changes the balance for an account by some $ value value less than the chosen increment and greater than the negative of that increment at the set time interval.|/timeeffect add RegalOwl random_balance 1y 50000000|
+
+====Accepted Time Intervals====
+|//Name//|//Meaning//|//Example//|
+|s|seconds|30s|
+|m|minutes|30m|
+|h|hours|8h|
+|d|days|3d|
+|w|weeks|2w|
+|y|years|1y|
