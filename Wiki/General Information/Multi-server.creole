@@ -1,4 +1,8 @@
-Multi server mode allows HyperConomy to share players, banks, trade objects, and shops between multiple servers.  This is useful for some setups such as BungeeCord.  To use this feature set multi-server.enable to true in config.yml.  Which features are synced can also be controlled in config.yml.  The update interval setting controls how often data is synced between servers.  It's measured in milliseconds so if you set it to 3000 that would mean it will update every 3 seconds.  
+Multi server mode allows HyperConomy to share players, banks, trade objects, and shops between multiple servers.  This is useful for some setups such as BungeeCord.  
+
+In order to use multi server mode you must be using MySQL.  In the future I plan to support SQLite as well, but for now MySQL must be used.  All servers in the multi-server setup must use the same MySQL database for HyperConomy.  Simply copy your MySQL config.yml settings to each server in the setup.  
+
+To use this feature, after configuring your MySQL database, set multi-server.enable to true in config.yml.  Which features are synced can be controlled in config.yml.  The update interval setting controls how often data is synced between servers.  It's measured in milliseconds so if you set it to 3000 that would mean it will update every 3 seconds.  Lower values will update settings more quickly but may be harder on performance.  You should keep the interval reasonably short, otherwise a player could make a change on one server, log out, and then log into another server in your multi-server network and make a change before their prior change is synchronized between all servers, allowing them to double spend money and other problems. 
 
 ==2 Server Config Setup Example==
 Server 1 has Minecraft IP 127.0.0.1 running on port 3313, server 2 has the same IP with Minecraft on port 3314
