@@ -1,5 +1,7 @@
 HyperConomy-Documentation
 =========================
+This repository is for HyperConomy documentation only.  If you're looking for HyperConomy's source code or would like to create a ticket [go here](https://github.com/RegalOwl/HyperConomy).  The latest source code can be found in the [hc-dev branch](https://github.com/RegalOwl/HyperConomy/tree/hc-dev).  
+
 
 Sections
 ---------
