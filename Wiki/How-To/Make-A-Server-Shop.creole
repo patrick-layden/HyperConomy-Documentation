@@ -1,0 +1,54 @@
+==Creating the Server Shop==
+An admin with the permission **hyperconomy.admin** can create a "server shop" using the **/servershop** command, or **/ss** for short.
+
+The quickest way to create a server shop is with the command **/ss p1 [shop name]**\\
+example: ///ss p1 WorldStore//\\
+This will create a server shop named WorldStore, that is only 1 block in size, positioned exactly where you are standing.\\
+To make the shop larger, move to a second position and use the command **/ss p2 [shop name]**\\
+These two positions are the two corners of a cuboid region, the boundary of your server shop.
+
+To select a different server shop to edit, use the command **/ss select [shop name]**\\
+To permanently remove a server shop, first select the shop you wish to remove,
+then use the command **/ss removeshop**
+
+
+==Managing Items==
+Server shops do not technically contain items.\\
+Instead, they sell items from the economy that they belong to.\\
+You control which items a server shop is allowed to buy and sell.\\
+By default a new server shop can buy and sell all items.
+
+Use the command **/ss ban all** to ban all items from being traded in a server shop.\\
+Use the command **/ss allow [item name]** to allow an item to be traded.\\
+If you cannot figure out an item's name, hold the item in your hand and use the command **/iteminfo**, or **/ii** for short.
+
+A whole category of items may be added with the command **/ss addcategory [category name]**\\
+To see a list of category names, use the command **/listcategories**\\
+To add your own categories, edit the file **categories.yml**, in the HyperConomy plugin folder.
+
+
+==Other Commands==
+
+    *Remove Category: **/ss removecategory [category name]**\\
+    Remove a category of items from this shop.
+
+    *Owner: **/ss owner [owner name]**
+    This sets the account that owns the currently selected server shop.\\
+
+    *List: **/ss list**\\
+    This lists the names of all shops on your server.
+
+    *Rename: **/ss rename [new name]**\\
+    This renames the currently selected server shop.
+
+    *Message: **/ss message [message]**\\
+    This sets the message that is displayed when a player enters the server shop.
+
+    *Economy: **/ss economy [economy name]**\\
+    This changes the economy that the currently selected server shop belongs to.
+
+    *Goto: **/ss goto**\\
+    This teleports you to the currently selected shop.
+
+    *Info: **/ss info**\\
+    This tells you which shop you currently have selected, which account it is owned by, and which economy it is part of.
