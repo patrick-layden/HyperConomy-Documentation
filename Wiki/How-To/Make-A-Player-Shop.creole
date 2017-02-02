@@ -1,0 +1,63 @@
+==Creating the Player Shop==
+
+A player with the permission **hyperconomy.playershop.create** can create a "player shop" using the **/manageshop** command, or **/ms** for short.
+
+The quickest way to create a player shop is with the command **/ms create [shop name]**\\
+example: ///ms create ToolMart//\\
+This will create a player shop named ToolMart, that is a 5x5x5 cubiod region, centered on the block upon which you are standing.
+
+To make a custom cubiod region:\\
+Stand at one corner of the region and use the command **/ms set1 [shop name]**.\\
+Then stand at the opposite corner of the desired region and use the command **/ms set2 [shop name]**.
+
+To select a different player shop to manage, use the command **/ms select [shop name]**\\
+To permanently remove a player shop, first select the shop you wish to remove, then use the command **/ms delete**
+
+
+==Adding Items==
+
+To add items to the player shop, hold the item you would like to add in your hand.\\
+Use the command **/ms add [amount]** , where amount is the number of that item that you wish to put in the shop.
+
+Every item must have it's "status" set in your shop. An items' "status" may be "buy", "sell", or "trade".\\
+If "buy", the item may be purchased from your shop.\\
+If "sell", the item may be sold to your shop.\\
+if "trade", the item may be both bought and sold.
+
+A simple way to get started with item status is to use the command **/ms status all trade**\\
+This will set all items' status to "trade".\\
+To set an individual item's status, use the command **/ms status [item name] [status]**\\
+example: ///ms status ironsword sell//
+
+
+==Setting Prices==
+
+By default, your player shop will use the same prices as server shops in your economy.\\
+You have the option to set custom buy and sell prices instead.\\
+To set the purchase price of an item, use the command **/ms buyprice [item name] [price]**\\
+To set the sale price of an item, use the command **/ms sellprice [item name] [price]**\\
+Or, set the purchase and sale price of an item at the same time with **/ms price [item name] [price]**\\
+example: ///ms price brick 1.10//
+
+
+==Other Commands==
+
+    Maxstock: **/ms maxstock [item name] [amount]**\\
+    This command sets the maximum amount of an item that your player shop will contain.\\
+    For example, if you use the command **/ms maxstock dirt 100** , players cannot sell any more dirt to your shop once it has 100 dirt in stock.
+
+    Allow: **/ms allow [player name]**\\
+    This will allow another player to edit your shop's inventory. This player will not be able to delete your shop.
+
+    Setstock: **/ms setstock [item name] [amount]**\\
+    This is an admin only command that will set the stock of an item in a player shop to the specified amount.
+
+    Owner: **/ms owner [player name]**\\
+    This is an admin only command that can be used to change the owner of a player shop.
+
+    Goto: **/ms goto**\\
+    This is an admin only command that can be used to teleport to the currently selected PlayerShop.
+
+    Stockmode: **/ms stockmode**\\
+    This is an admin only command that sets the currently selected PlayerShop's stockmode.\\
+    In "economy" stockmode, the shop will no longer function as a PlayerShop, but as a ServerShop with added features.
