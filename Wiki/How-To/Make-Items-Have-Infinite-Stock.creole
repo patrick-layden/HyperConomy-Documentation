@@ -1,0 +1,21 @@
+===How to set items to have infinite stock===
+
+First you must open your HyperConomy config.yml and set the following configuration option:\\
+**unlimited-stock-for-static-items: false**\\
+
+Now any item that you assign **static pricing** will have infinite stock.
+
+The following command will set the item "dirt" to static pricing:\\
+**/hcset static dirt**
+
+Note that the item still has stock in the economy, however the stock is never depleted.\\
+A player may not purchase more than the economy stock value, in a single transaction.\\
+So, if you want a player to be able to "**/buy dirt 100**" then you must make sure there is at least 100 dirt in the economy.\\
+For example, to set 1000 dirt in the database stock:\\
+**/hcset stock dirt 1000**
+
+To set all items in your economy to static pricing use this command: \\
+**/hcset static all:true**
+
+To set all items in your economy back to dynamic pricing, use this command:\\
+**/hcset static all:false**
