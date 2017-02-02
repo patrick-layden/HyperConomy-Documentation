@@ -13,3 +13,4 @@ Sections
 * [Shops] (https://github.com/RegalOwl/HyperConomy-Documentation/tree/master/Wiki/Shops)
 * [General Information] (https://github.com/RegalOwl/HyperConomy-Documentation/tree/master/Wiki/General%20Information)
 * [Signs] (https://github.com/RegalOwl/HyperConomy-Documentation/tree/master/Wiki/Signs)
+* [How-Tos] (https://github.com/RegalOwl/HyperConomy-Documentation/tree/master/Wiki/How-To)
