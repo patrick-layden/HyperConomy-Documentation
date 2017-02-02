@@ -6,39 +6,39 @@
 
 To create a chest shop you must place a properly formatted sign above a chest like this:
 
-BS
+BS\\
 XC
 
-B = The block that the sign is attacked to.
-S = The sign
-X = Anything
+B = The block that the sign is attacked to.\\
+S = The sign\\
+X = Anything\\
 C = Chest
 
 There are three types of chests: the buy chest, the sell chest, and the trade chest.
 
-[Buy] : The buy chest only allows other players to purchase items from the chest.
-[Sell] : The sell chest only allows other players to sell items to the chest.
+[Buy] : The buy chest only allows other players to purchase items from the chest.\\
+[Sell] : The sell chest only allows other players to sell items to the chest.\\
 [Trade] : The trade chest allows both buying and selling from the chest.
 
 To set up the chest shop sign, use this format:
 
-line 1 = Price for all items/enchantments in chest. Use: [Currency Symbol][Price]
-line 2 = "[buy]", "[sell]", or "[trade]"
-line 3 = blank (will be filled in automatically with your name.)
+line 1 = Price for all items/enchantments in chest. Use: [Currency Symbol][Price]\\
+line 2 = "[buy]", "[sell]", or "[trade]"\\
+line 3 = blank (will be filled in automatically with your name.)\\
 line 4 = blank (will be filled in automatically if you have a really long name)
 
 Example Signs: (remove all quotes)
 
-line 1 = ""
-line 2 = "[trade]"
-line 3 = ""
-line 4 = ""
+line 1 = ""\\
+line 2 = "[trade]"\\
+line 3 = ""\\
+line 4 = ""\\
 (This chest will use dynamic pricing, minus taxes, for all items in the chest. Players will be able to both buy and sell items from it.)
 
-line 1 = "$70.50"
-line 2 = "[sell]"
-line 3 = ""
-line 4 = ""
+line 1 = "$70.50"\\
+line 2 = "[sell]"\\
+line 3 = ""\\
+line 4 = ""\\
 (This chest will only sell items for $70.50 per item).
 
 Other notes:  
