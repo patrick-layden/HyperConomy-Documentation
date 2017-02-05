@@ -9,7 +9,7 @@ To create a chest shop you must place a properly formatted sign above a chest li
 BS\\
 XC
 
-B = The block that the sign is attacked to.\\
+B = The block that the sign is attached to.\\
 S = The sign\\
 X = Anything\\
 C = Chest
