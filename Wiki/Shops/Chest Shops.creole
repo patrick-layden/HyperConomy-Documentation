@@ -1,10 +1,17 @@
 [[https://youtu.be/Iza75-OPmi8|Video Tutorial]]
-* Chest shops are single chests with a sign above them that function as shops.
-* All players have access to chest shops unless the hyperconomy.chestshop permission is removed.
-* You can limit the number of chest shops in config.yml with the max-per-player chest-shop line.
-* Chest shops do not charge tax.
 
 To create a chest shop place a sign above an empty single chest and write "chestshop" on the first line.  If something goes wrong a message will appear on the sign.
+
+When opening your own chestshop, a toolbar composed of items will appear as the bottom inventory row.  Hover over the buttons to see what they do.  All buttons and items will display instructions when hovering.  
+
+You can sell any normal Minecraft item in chest shops, set the buy price, sell price, or only allow items to be purchased or sold.  
+
+* Chest shops are single chests with a sign above them that function as shops.
+* All players have access to chest shops unless the hyperconomy.chestshop permission is removed.
+* You can limit the number of chest shops per player in config.yml with the max-per-player chest-shop line.
+* Chest shops do not charge tax, and money is transferred directly between player accounts.
+
+
 
 
 Other notes:  
