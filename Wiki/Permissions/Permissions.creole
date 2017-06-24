@@ -1,6 +1,6 @@
 |=Permission|=Default|=Description|
 |hyperconomy.*|op|Gives access to all HyperConomy commands and adds all the following permissions.|
-|hyperconomy.use|true|Allows general use of HyperConomy.  Enabled by default for everyone. When this permission is given the following nodes are also given: hyperconomy.buy, hyperconomy.sell, hyperconomy.value, hyperconomy.sellall, hyperconomy.info, hyperconomy.top, hyperconomy.xp, hyperconomy.chestshop, hyperconomy.playershop, hyperconomy.buysign, hyperconomy.sellsign, hyperconomy.pay|
+|hyperconomy.use|true|Allows general use of HyperConomy.  Enabled by default for everyone. When this permission is given the following nodes are also given: hyperconomy.buy, hyperconomy.sell, hyperconomy.value, hyperconomy.sellall, hyperconomy.info, hyperconomy.top, hyperconomy.xp, hyperconomy.chestshop, hyperconomy.playershop, hyperconomy.buysign, hyperconomy.sellsign, hyperconomy.pay, hyperconomy.balance, hyperconomy.help|
 |hyperconomy.econ|op|Allows use of all basic economy commands.  When this permission is given the following nodes are also given: hyperconomy.balanceall, hyperconomy.pay, hyperconomy.topbalance|
 |hyperconomy.admin|false|Give access to HyperConomy administrative commands.|
 |hyperconomy.buy|false|Allows use of buy commands.|
@@ -20,6 +20,8 @@
 |hyperconomy.buysign|false|Allows purchasing from transaction signs.|
 |hyperconomy.sellsign|false|Allows selling to transaction signs.|
 |hyperconomy.balanceall|false|Allows other players' balances to be displayed.|
+|hyperconomy.balance|false|Allows use of the /hcbalance command.|
+|hyperconomy.help|false|Allows use of the /hc help command.|
 |hyperconomy.topbalance|false|Allows display of top server balances.|
 |hyperconomy.pay|false|Allows sending payment to other players.|
 |hyperconomy.playershop|false|Allows the use of the /manageshop command.|
